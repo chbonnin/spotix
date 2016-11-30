@@ -1,0 +1,126 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.743331,
+          48.586201
+        ]
+      },
+      "properties": {
+        "name": "Biocoop - Le Quai Des Halles",
+        "Horaires d’ouverture": "Lundi 12:00 – 20:00\nMardi 10:00 – 20:00\nMercredi 10:00 – 20:00\nJeudi 10:00 – 20:00\nVendredi 10:00 – 20:00\nSamedi 09:00 – 19:00\nDimanche Fermé",
+        "Adresse": "6 Rue de Sébastopol, 67000 Strasbourg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.447186,
+          48.406666
+        ]
+      },
+      "properties": {
+        "name": "Claire Brandin",
+        "Horaires d’ouverture": "Lundi : sur rendez-vous\nMardi : sur rendez-vous\nMercredi : sur rendez-vous\nJeudi : sur rendez-vous\nVendredi : 10:00 – 18:00\nSamedi : Fermé\nDimanche : Fermé",
+        "Adresse": "12 Rue du Collège, 67140 Barr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.742624,
+          48.58817
+        ]
+      },
+      "properties": {
+        "name": "Crédit Municipal de Strasbourg",
+        "Horaires d’ouverture": "Lundi 8h00 – 12h00 et 13h00 16h30\nMardi 8h00 – 12h00 et 13h00 – 18h00\nMercredi 8h00 – 12h00 et 13h00 16h30\nJeudi 8h00 – 12h00 et 13h00 16h30\nVendredi 8h00 – 12h00 et 13h00 16h30",
+        "Adresse": "6 Rue d'Ingwiller, 67000 Strasbourg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.745579,
+          48.562398
+        ]
+      },
+      "properties": {
+        "name": "Ilot de la Meinau",
+        "Horaires d’ouverture": "Lundi : 9h00 – 13h00\nMardi : Fermé\nMercredi : 9h00 – 19h00\nJeudi : 9h00 – 13h00\nVendredi : 9h00 – 18h00\nSamedi : 9h00 – 13h00\nDimanche : Fermé",
+        "Adresse": "36 Route de la fédération 67100  Strasbourg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.752327,
+          48.605243
+        ]
+      },
+      "properties": {
+        "name": "Labo 1000",
+        "Horaires d’ouverture": "lundi : 09:00 – 12:30, 14:00 – 18:30\nmardi : 09:00 – 12:30, 14:00 – 17:00\nmercredi : 09:00 – 12:30, 14:00 – 18:30\njeudi 09:00 – 12:30, 14:00 – 17:00\nvendredi 09:00 – 12:30, 14:00 – 18:00\nsamedi : Fermé\ndimanche : Fermé",
+        "Adresse": "4 Rue de la Bonde, 67300 Schiltigheim "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.751628,
+          48.613221
+        ]
+      },
+      "properties": {
+        "name": "Le Divanoo",
+        "Horaires d’ouverture": "Lundi : 8h00 – 10h00 et 14h00 – 18h00\nMardi : 8h00 – 10h00 et 14h00 – 18h00\nMercredi : 8h00 – 10h00 et 14h00 – 18h00\nJeudi : 8h00 – 10h00 et 14h00 – 18h00\nVendredi : 8h00 – 10h00 et 14h00 – 18h00\nSamedi : Fermé\nDimanche : Fermé",
+        "Adresse": "25 Route de Bischwiller 67800 Bischheim"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.745598,
+          48.582807
+        ]
+      },
+      "properties": {
+        "name": "Librairie Kléber",
+        "Horaires d’ouverture": "lundi : 10:00 – 19h30\nmardi : 09:00 – 19h30\nmercredi : 09:00 – 19h30\njeudi : 09:00 – 19h30\nvendredi : 09:00 – 19h30\nsamedi : 09:00 – 19h30\ndimanche : Fermé",
+        "Adresse": "1 rue des Francs Bourgeois, 67000 Strasbourg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.455633,
+          48.259515
+        ]
+      },
+      "properties": {
+        "name": "Restaurant L'Acoustic",
+        "description": "",
+        "Horaires d’ouverture": "lundi : 09h00 – 16h00 mardi : 09h00 – 16h00 mercredi : 09h00 – 16h00 jeudi : 09h00 – 16h00 vendredi : 09h00 – 16h00, 18h00 – 22h00 samedi : 09h00 – 16h00, 18h00 – 22h00 dimanche : Fermé",
+        "Adresse": "5 Place du Marché Vert, 67600 Sélestat"
+      }
+    }
+  ]
+}

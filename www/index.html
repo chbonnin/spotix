@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" href="lib/leaflet-1.0.1/leaflet.css" />
+        <script src="lib/leaflet-1.0.1/leaflet.js"></script>
+
+        <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css" />
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+        <script src="lib/jquery.localisation.min.js"></script>
+        <script src="js/trad.js"></script>
+        <title>Spotix</title>
+    </head>
+    <body>
+        <div id="map"></div>
+        <div id="idList"></div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/data.js"></script>
+        <script type="text/javascript" src="js/manageData.js"></script>
+        <script type="text/javascript" src="js/spotix.js"></script>
+        <div data-role="footer" data-position="fixed" class="ui-footer ui-bar-a ui-footer-fixed nav-glyphish" data-tap-toggle="false">
+            <div data-role="navbar" class="nav-glyphish">
+            <ul>
+                <li><a href="#" data-icon="location" id="idShowMap" class="ui-btn-active"></a></li>
+                <li><a href="#" data-icon="bullets" id="idShowList"></a></li>
+                <li><a href="#" data-icon="custom" id="idFiltre" ></a></li>
+                <li><a href="#" data-icon="gear" id="idSettings" ></a></li>
+            </ul>
+            </div>
+        </div>
+
+	<script>
+        var map = L.map('map');
+        var currentLocationCircle, spotNewMarker;
+        var gpsLocateClicked=false;
+        var language;
+        var lstSpot;
+        var numSpotMax;
+        
+        localize($.localise.defaultLanguage);
+        $(document).ready(function(){
+                          $("#idList").hide();
+                          $("#idShowList").click(function(){showList();});
+                          $("#idShowMap").click(function(){showMap(0, 0);});
+                          $("#idFiltre").click(function(){showCat();});
+                          $("#idSettings").click(function(){showSettings();});
+                          });
+		L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		//L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
+		//L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+			id: 'mapbox.streets'
+		}).addTo(map);
+        var GpsLocate = L.Control.extend({
+                                         options: {position: 'topright'},
+                                         
+                                         onAdd: function (map) {
+                                         // create the control container with a particular class name
+                                         var container = L.DomUtil.create('div', 'GpsLocateControl');
+                                         var image = L.DomUtil.create('img', '', container);
+                                         image.setAttribute('src','img/currentLocation.png');
+                                         image.setAttribute('height',30);
+                                         image.setAttribute('class','GpsLocateImage');
+                                         
+                                         // ... initialize other DOM elements, add listeners, etc.
+                                         L.DomEvent.addListener(container, 'click', gpsLocateNow, this);
+                                         return container;
+                                         }
+                                         });
+                                         
+        initData();
+            
+//        showMap(0,0);
+    
+		function onLocationFound(e) {
+			var radius = e.accuracy / 2;
+//			L.marker(e.latlng).addTo(map).bindPopup("You are within " + radius + " meters from this point").openPopup();
+            if (currentLocationCircle)
+                map.removeLayer(currentLocationCircle);
+//                currentLocationCircle.removeFrom(map);
+                
+            currentLocationCircle=L.circle(e.latlng, radius, {color:'red', fillOpacity:0.3});
+            currentLocationCircle.addTo(map);
+//            map.setView([e.latlng.lat, e.latlng.lng], calcMaxZoom(e.latlng));
+            setMapBounds(e.latlng);
+		}
+
+		function onLocationError(e) {
+            centerList(lstSpot);
+			alert(e.message);
+		}
+
+        function gpsLocateNow(){
+            map.locate({setView: true, maxZoom: 16});
+            gpsLocateClicked=true;
+            $(".GpsLocateImage").css({letterSpacing: 0});
+            $(".GpsLocateImage").animate({  letterSpacing: 90 },{step:function(now,fx){$(this).css({transform: "rotate("+now+"deg)"})}});
+        }
+    
+    function onClick(e) {
+        if (gpsLocateClicked){
+            gpsLocateClicked=false;
+            return;
+        }
+        if (currentLocationCircle )
+            map.removeLayer(currentLocationCircle);
+        
+        currentLocationCircle=L.circleMarker(e.latlng,  {color:'red', fillOpacity:0.3});
+        currentLocationCircle.addTo(map);
+    }
+    
+    function onAltClick(e){
+        if (spotNewMarker){
+            map.removeLayer(spotNewMarker);
+        }
+        spotNewMarker=L.marker(e.latlng,{icon:lstCat[0].icon}).bindPopup(htmlNewSpot(e.latlng)).addTo(map);
+        spotNewMarker.openPopup();
+    }
+    map.on('locationfound', onLocationFound);
+    map.on('locationerror', onLocationError);
+    map.on('contextmenu', onAltClick);
+//    map.on('click', onClick);
+
+    map.addControl(new GpsLocate());
+
+    $(function(){
+      document.addEventListener("deviceready", gpsLocateNow, false);
+      })
+    //gpsLocateNow();
+	</script>
+    </body>
+</html>
