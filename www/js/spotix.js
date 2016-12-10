@@ -449,7 +449,7 @@ function updateFromUrl(){
                     map.removeLayer(lstSpot[iSpot].marker);
 
                   lstSpot=lst;
-		  localStoreSettings(json);
+                  localStoreSettings(json);
                   initData();
                   showList()
                }

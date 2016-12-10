@@ -1,4 +1,5 @@
 tradAdresse=        "Address";
+tradAdresseCopiee=  "Address copied into the clipboard. You can paste it in your navigation application.";
 tradAddInList=      "Add in list";
 tradCancel=         "Cancel";
 tradCategorie=      "Category";

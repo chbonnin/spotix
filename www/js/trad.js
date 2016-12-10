@@ -1,4 +1,5 @@
 tradAdresse=        "Adresse";
+tradAdresseCopiee=  "Adresse copiée dans le presse-papier. Vous pouvez la coller dans votre application de calcul d'itinéraire.";
 tradAddInList=      "Ajouter dans la liste";
 tradCancel=         "Annuler";
 tradCategorie=      "Catégorie";

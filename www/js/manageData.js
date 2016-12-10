@@ -78,6 +78,7 @@ function copyList(){
 function copyAddress(iSpot){
     try{
         cordova.plugins.clipboard.copy(findSpotNum(iSpot).adresse);
+        alert(tradAdresseCopiee);
     } catch(err){
         alert(err.message);
     }
