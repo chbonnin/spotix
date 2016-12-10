@@ -147,25 +147,45 @@ function createSpot(){
             showMap();
         }
 }
-//remplissage de l'écran de la liste des spots
+//remplissage de la zone de recherche
+function fillSearch(){
+    var strRet="<div class='ui-input-search ui-body-inherit ui-corner-all ui-shadow-inset'>";
+    
+    strRet+="<input type='search' id='idSearchInput' class='ui-input-has-clear' value='"+strSearch+"'></div>";
+    $("#idSearchDiv").html(strRet);
+    $("#idSearchInput").on("change keyup paste search", changeSearch);
+}
+//remplissage du contenu de la liste des spots
 function fillList(){
-    var strLst="", strCat;
+    var strCat;
     var iNb=0;
+    var bCatSelected=false;
+    var strLst="";
     for (iSpot=0;iSpot<lstSpot.length; iSpot++){
         var iCat=mapCat[lstSpot[iSpot].categorie];
         if (iCat>=0 && !lstCat[iCat].exclu){
-            if (!strCat || strCat!==lstSpot[iSpot].categorie){
-                strCat=lstSpot[iSpot].categorie;
-                
-                strLst+="<li data-role='list-divider' class='ui-li-divider ui-bar-a'><img height='16' src='img/icon/"+
-                lstCat[iCat].image+"' class='ui-li-icon'> "+strCat+"</li>";
+            bCatSelected=true;
+            if (isSpotSearched(lstSpot[iSpot])){
+                if (!strCat || strCat!==lstSpot[iSpot].categorie){
+                    strCat=lstSpot[iSpot].categorie;
+                    
+                    strLst+="<li data-role='list-divider' class='ui-li-divider ui-bar-a'><img height='16' src='img/icon/"+
+                    lstCat[iCat].image+"' class='ui-li-icon'> "+strCat+"</li>";
+                }
+                strLst+="<li><a href='#' class='ui-btn ui-btn-icon-right ui-icon-carat-r' onclick='showDetail("+lstSpot[iSpot].numero+");'>"+lstSpot[iSpot].nom+"</a></li>";
+                iNb+=1;
             }
-            strLst+="<li><a href='#' class='ui-btn ui-btn-icon-right ui-icon-carat-r' onclick='showDetail("+lstSpot[iSpot].numero+");'>"+lstSpot[iSpot].nom+"</a></li>";
-            iNb+=1;
         }
     }
-    strLst+="<li data-role='list-divider' class=' ui-li-divider ui-bar-a '><p class='grayed'>"+iNb+" "+tradSpots+"</P></li>";
+    strLst+="<li data-role='list-divider' class=' ui-li-divider ui-bar-a '><p class='grayed'>"+iNb+" "+tradSpots;
+    if (!bCatSelected) strLst+=" ("+tradAucuneCategorie+")";
+    strLst+="</p></li>";
     $("#idLstSpot").html(strLst);
+}
+//Modification de la chaîne de recherche dans les spots
+function changeSearch(){
+    strSearch=$("#idSearchInput").val();
+    fillList();
 }
 //remplissage de l'écran de la liste des catégories
 function listCat(){
@@ -253,7 +273,8 @@ function showOrHideMarkers(){
 //Bascule vers la vue liste
 function showList(){
     $("#map").hide();
-    $("#idList").html('<ul data-role="listview" data-inset="true" data-divider-theme="a" id="idLstSpot" class="ui-listview ui-listview-inset ui-corner-all ui-shadow"></ul>');
+    $("#idList").html('<div id="idSearchDiv" class="ui-content"></div><div class="ui-content"><ul data-role="listview" data-inset="true" data-divider-theme="a" id="idLstSpot" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-content"></ul></div>');
+    fillSearch();
     fillList();
     $("#idList").show();
     $("#idShowMap").removeClass("ui-btn-active");
@@ -266,7 +287,7 @@ function showDetail(iSpot){
     var spot =findSpotNum(iSpot);
     if (spot){
 	    $("#map").hide();
-	    $("#idList").html('<ul data-role="listview" data-inset="true" data-divider-theme="a" id="idLstSpot" class="ui-listview ui-listview-inset ui-corner-all ui-shadow"></ul>');
+	    $("#idList").html('<div class="ui-content"><ul data-role="listview" data-inset="true" data-divider-theme="a" id="idLstSpot" class="ui-listview ui-listview-inset ui-corner-all ui-shadow"></ul></div>');
 	    $("#idLstSpot").html(spot.htmlDesc());
 	    $("#idList").show();
     } else 
