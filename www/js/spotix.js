@@ -196,15 +196,15 @@ function listCat(){
     var iCat, iCat0;
     for (iCat=0;iCat<lstCat.length; iCat++){
         iCat0=(iCat+1)%lstCat.length;//astuce pour que le numéro 0 (nouveau spot) soit en fin de liste
-	if (lstCat[iCat0].exist){
-		strEnd+='<input type="checkbox" id="idCat'+iCat0+'" onclick="checkCat('+iCat0+')" ';
-		if (lstCat[iCat0].exclu)
-			bAll=false;
-		else
-			strEnd+="checked";
-
-		strEnd+='><label for="idCat'+iCat0+'">'+lstCat[iCat0].name+'</label>';
-	}
+        if (lstCat[iCat0].exist){
+            strEnd+='<input type="checkbox" id="idCat'+iCat0+'" onclick="checkCat('+iCat0+')" ';
+            if (lstCat[iCat0].exclu)
+                bAll=false;
+            else
+                strEnd+="checked";
+            
+            strEnd+='><label for="idCat'+iCat0+'">'+lstCat[iCat0].name+'</label>';
+        }
     }
     if (bAll)
         strBegin+="checked";
@@ -241,19 +241,35 @@ function appSettings(){
 function checkAllCat(){
     var iCat=0;
     var bCheck=document.getElementById("idCatAll").checked;
-    for (var iCat=0;iCat<lstCat.length; iCat++)
-	if (lstCat[iCat].exist){
-		document.getElementById("idCat"+iCat).checked=bCheck;
-		lstCat[iCat].exclu=!bCheck;
-    	}
+    for (var iCat=0;iCat<lstCat.length; iCat++){
+        if (lstCat[iCat].exist){
+            document.getElementById("idCat"+iCat).checked=bCheck;
+            lstCat[iCat].exclu=!bCheck;
+        }
+    }
     $("fieldset[data-role=controlgroup]").controlgroup();
+    montreFiltreActif()
 }
 //cochage / décochage d'une catégorie
 function checkCat(iCat){
     var bCheck=document.getElementById("idCat"+iCat).checked;
     lstCat[iCat].exclu = !bCheck;
+    montreFiltreActif()
 }
-
+//Change l'icône du bouton filtre pour montrer si un filtre est actif (une catégorie est cachée)
+function montreFiltreActif(){
+    var bActif=false;
+    for (var iCat=0;iCat<lstCat.length; iCat++){
+        if (lstCat[iCat].exist && lstCat[iCat].exclu){
+            bActif=true;
+        }
+    }
+    if (bActif)
+        $("#idFiltre").addClass("FiltreCercle");
+    else
+        $("#idFiltre").removeClass("FiltreCercle");
+}
+    
 //montre ou cache les marqueurs sélectionnés sur la carte
 function showOrHideMarkers(){
     for (var iSpot=0;iSpot<lstSpot.length; iSpot++){
@@ -273,7 +289,7 @@ function showOrHideMarkers(){
 //Bascule vers la vue liste
 function showList(){
     $("#map").hide();
-    $("#idList").html('<div id="idSearchDiv" class="ui-content"></div><div class="ui-content"><ul data-role="listview" data-inset="true" data-divider-theme="a" id="idLstSpot" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-content"></ul></div>');
+    $("#idList").html('<div class="ui-content"><div id="idSearchDiv"></div><ul data-role="listview" data-inset="true" data-divider-theme="a" id="idLstSpot" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-content"></ul></div>');
     fillSearch();
     fillList();
     $("#idList").show();
@@ -309,6 +325,7 @@ function showCat(){
     $("#map").hide();
     $("#idList").html("<div class='ui-content'><form><fieldset data-role='controlgroup' id='idListCat'></fieldset></form></div>");
     $("#idListCat").html(listCat());
+    montreFiltreActif();
 //    $("input[type='checkbox']").checkboxradio();
     $("fieldset[data-role=controlgroup]").controlgroup();//Pour appliquer les styles JQueryMobile aux cases à cocher
     $("#idList").show();

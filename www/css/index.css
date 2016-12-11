@@ -133,7 +133,8 @@ p.grayed {
     padding-top:30px;
 }
 
-#idFiltre:after { background:  url("../img/icon/button-filter.png") 50% 50% no-repeat;  background-size: 28px 28px; }
+.Filtre:after { background:  url("../img/icon/button-filter.png") 50% 50% no-repeat;  background-size: 28px 28px; }
+.FiltreCercle:after { background:  url("../img/icon/button-filter-circled.png") 50% 50% no-repeat;  background-size: 28px 28px; }
 td a {    word-break: break-all;}
 
 /*#idFilter:after { background:  url("img/icon/beermug.png") 50% 50% no-repeat;  background-size: 22px 27px; }*/
