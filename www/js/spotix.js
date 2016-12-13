@@ -147,25 +147,45 @@ function createSpot(){
             showMap();
         }
 }
-//remplissage de l'écran de la liste des spots
+//remplissage de la zone de recherche
+function fillSearch(){
+    var strRet="<div class='ui-input-search ui-body-inherit ui-corner-all ui-shadow-inset'>";
+    
+    strRet+="<input type='search' id='idSearchInput' class='ui-input-has-clear' value='"+strSearch+"'></div>";
+    $("#idSearchDiv").html(strRet);
+    $("#idSearchInput").on("change keyup paste search", changeSearch);
+}
+//remplissage du contenu de la liste des spots
 function fillList(){
-    var strLst="", strCat;
+    var strCat;
     var iNb=0;
+    var bCatSelected=false;
+    var strLst="";
     for (iSpot=0;iSpot<lstSpot.length; iSpot++){
         var iCat=mapCat[lstSpot[iSpot].categorie];
         if (iCat>=0 && !lstCat[iCat].exclu){
-            if (!strCat || strCat!==lstSpot[iSpot].categorie){
-                strCat=lstSpot[iSpot].categorie;
-                
-                strLst+="<li data-role='list-divider' class='ui-li-divider ui-bar-a'><img height='16' src='img/icon/"+
-                lstCat[iCat].image+"' class='ui-li-icon'> "+strCat+"</li>";
+            bCatSelected=true;
+            if (isSpotSearched(lstSpot[iSpot])){
+                if (!strCat || strCat!==lstSpot[iSpot].categorie){
+                    strCat=lstSpot[iSpot].categorie;
+                    
+                    strLst+="<li data-role='list-divider' class='ui-li-divider ui-bar-a'><img height='16' src='img/icon/"+
+                    lstCat[iCat].image+"' class='ui-li-icon'> "+strCat+"</li>";
+                }
+                strLst+="<li><a href='#' class='ui-btn ui-btn-icon-right ui-icon-carat-r' onclick='showDetail("+lstSpot[iSpot].numero+");'>"+lstSpot[iSpot].nom+"</a></li>";
+                iNb+=1;
             }
-            strLst+="<li><a href='#' class='ui-btn ui-btn-icon-right ui-icon-carat-r' onclick='showDetail("+lstSpot[iSpot].numero+");'>"+lstSpot[iSpot].nom+"</a></li>";
-            iNb+=1;
         }
     }
-    strLst+="<li data-role='list-divider' class=' ui-li-divider ui-bar-a '><p class='grayed'>"+iNb+" "+tradSpots+"</P></li>";
+    strLst+="<li data-role='list-divider' class=' ui-li-divider ui-bar-a '><p class='grayed'>"+iNb+" "+tradSpots;
+    if (!bCatSelected) strLst+=" ("+tradAucuneCategorie+")";
+    strLst+="</p></li>";
     $("#idLstSpot").html(strLst);
+}
+//Modification de la chaîne de recherche dans les spots
+function changeSearch(){
+    strSearch=$("#idSearchInput").val();
+    fillList();
 }
 //remplissage de l'écran de la liste des catégories
 function listCat(){
@@ -176,15 +196,15 @@ function listCat(){
     var iCat, iCat0;
     for (iCat=0;iCat<lstCat.length; iCat++){
         iCat0=(iCat+1)%lstCat.length;//astuce pour que le numéro 0 (nouveau spot) soit en fin de liste
-	if (lstCat[iCat0].exist){
-		strEnd+='<input type="checkbox" id="idCat'+iCat0+'" onclick="checkCat('+iCat0+')" ';
-		if (lstCat[iCat0].exclu)
-			bAll=false;
-		else
-			strEnd+="checked";
-
-		strEnd+='><label for="idCat'+iCat0+'">'+lstCat[iCat0].name+'</label>';
-	}
+        if (lstCat[iCat0].exist){
+            strEnd+='<input type="checkbox" id="idCat'+iCat0+'" onclick="checkCat('+iCat0+')" ';
+            if (lstCat[iCat0].exclu)
+                bAll=false;
+            else
+                strEnd+="checked";
+            
+            strEnd+='><label for="idCat'+iCat0+'">'+lstCat[iCat0].name+'</label>';
+        }
     }
     if (bAll)
         strBegin+="checked";
@@ -221,19 +241,35 @@ function appSettings(){
 function checkAllCat(){
     var iCat=0;
     var bCheck=document.getElementById("idCatAll").checked;
-    for (var iCat=0;iCat<lstCat.length; iCat++)
-	if (lstCat[iCat].exist){
-		document.getElementById("idCat"+iCat).checked=bCheck;
-		lstCat[iCat].exclu=!bCheck;
-    	}
+    for (var iCat=0;iCat<lstCat.length; iCat++){
+        if (lstCat[iCat].exist){
+            document.getElementById("idCat"+iCat).checked=bCheck;
+            lstCat[iCat].exclu=!bCheck;
+        }
+    }
     $("fieldset[data-role=controlgroup]").controlgroup();
+    montreFiltreActif()
 }
 //cochage / décochage d'une catégorie
 function checkCat(iCat){
     var bCheck=document.getElementById("idCat"+iCat).checked;
     lstCat[iCat].exclu = !bCheck;
+    montreFiltreActif()
 }
-
+//Change l'icône du bouton filtre pour montrer si un filtre est actif (une catégorie est cachée)
+function montreFiltreActif(){
+    var bActif=false;
+    for (var iCat=0;iCat<lstCat.length; iCat++){
+        if (lstCat[iCat].exist && lstCat[iCat].exclu){
+            bActif=true;
+        }
+    }
+    if (bActif)
+        $("#idFiltre").addClass("FiltreCercle");
+    else
+        $("#idFiltre").removeClass("FiltreCercle");
+}
+    
 //montre ou cache les marqueurs sélectionnés sur la carte
 function showOrHideMarkers(){
     for (var iSpot=0;iSpot<lstSpot.length; iSpot++){
@@ -253,7 +289,8 @@ function showOrHideMarkers(){
 //Bascule vers la vue liste
 function showList(){
     $("#map").hide();
-    $("#idList").html('<ul data-role="listview" data-inset="true" data-divider-theme="a" id="idLstSpot" class="ui-listview ui-listview-inset ui-corner-all ui-shadow"></ul>');
+    $("#idList").html('<div class="ui-content"><div id="idSearchDiv"></div><ul data-role="listview" data-inset="true" data-divider-theme="a" id="idLstSpot" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-content"></ul></div>');
+    fillSearch();
     fillList();
     $("#idList").show();
     $("#idShowMap").removeClass("ui-btn-active");
@@ -266,7 +303,7 @@ function showDetail(iSpot){
     var spot =findSpotNum(iSpot);
     if (spot){
 	    $("#map").hide();
-	    $("#idList").html('<ul data-role="listview" data-inset="true" data-divider-theme="a" id="idLstSpot" class="ui-listview ui-listview-inset ui-corner-all ui-shadow"></ul>');
+	    $("#idList").html('<div class="ui-content"><ul data-role="listview" data-inset="true" data-divider-theme="a" id="idLstSpot" class="ui-listview ui-listview-inset ui-corner-all ui-shadow"></ul></div>');
 	    $("#idLstSpot").html(spot.htmlDesc());
 	    $("#idList").show();
     } else 
@@ -288,6 +325,7 @@ function showCat(){
     $("#map").hide();
     $("#idList").html("<div class='ui-content'><form><fieldset data-role='controlgroup' id='idListCat'></fieldset></form></div>");
     $("#idListCat").html(listCat());
+    montreFiltreActif();
 //    $("input[type='checkbox']").checkboxradio();
     $("fieldset[data-role=controlgroup]").controlgroup();//Pour appliquer les styles JQueryMobile aux cases à cocher
     $("#idList").show();
@@ -449,7 +487,7 @@ function updateFromUrl(){
                     map.removeLayer(lstSpot[iSpot].marker);
 
                   lstSpot=lst;
-		  localStoreSettings(json);
+                  localStoreSettings(json);
                   initData();
                   showList()
                }
