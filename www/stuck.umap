@@ -41,7 +41,7 @@
     "scaleControl": true,
     "scrollWheelZoom": true,
     "zoom": 10,
-    "updateDate": "27 November 2016"
+    "updateDate": "13 December 2016"
   },
   "geometry": {
     "type": "Point",
@@ -51,39 +51,6 @@
     ]
   },
   "layers": [
-
-    {
-      "type": "FeatureCollection",
-
-      "_storage": {
-        "displayOnLoad": true,
-        "name": "Nouveau spot",
-        "id": 28091,
-        "remoteData": {},
-        "iconUrl": "http://www.lestuck.eu/wp-content/uploads/2015/09/Nouveau.png",
-        "color": "#FF8000"
-      },
-      "features": [
-
-        {
-          "type": "Feature",
-          "properties": {
-            "name": "Fernex Sébastien Artiste sculpteur",
-            "Description": "Création de sculptures en pierre et en bois Cours de sculptures sur pierre (gré) et bois, à la Maison forestière du Landsberg (St Nabor)",
-            "Adresse": "Maison forestière du Landsberg 67530 ST NABOR",
-            "Email": "sebfernex@gmail.com",
-            "Téléphone": "06 52 46 77 98",
-            "Site web": "www.sebastienfernex.fr",
-            "Défi": "Se fournir en gré dans un affleurement à proximité plutôt que d'aller dans le nord de l'Alsace"
-          },
-          "geometry": {
-            "type": "Point",
-            "coordinates": [7.42392, 48.445439]
-          }
-        }
-
-    ]
-   },
 
     {
       "type": "FeatureCollection",
@@ -213,7 +180,7 @@
           "type": "Feature",
           "properties": {
             "name": "Ferme Lindgrube",
-            "Description": "Cette ferme, conduite en agriculture biologique, élève un troupeau de vaches de race vosgienne. Vous y trouverez lait, yaourts nature ou aromatisés aux huiles essentielles, crèmes desserts, fromage blanc à l’ancienne, bargkas, munster...",
+            "Description": "Cette ferme, conduite en agriculture biologique, élève un troupeau de vaches de race vosgienne. Vous y trouverez lait, yaourts nature ou aromatisés aux huiles essentielles, crèmes desserts, fromage blanc à l&rsquo;ancienne, bargkas, munster...",
             "Adresse": "Ferme Lindgrube 67220 Breitenbach",
             "Email": "laulergerard@hotmail.fr",
             "Téléphone": "03.88.57.29.41",
@@ -305,6 +272,25 @@
         {
           "type": "Feature",
           "properties": {
+            "name": "Herrmann- à Hanaufruits",
+            "Description": "Fruits et légumes issus de l&#39;agriculture biologique, locale et raisonnable !",
+            "Adresse": "rue de Riedheim 67330 BOUXWILLER",
+            "Email": "contact@fruits-herrmann.fr",
+            "Téléphone": "03 88 70 57 10",
+            "Site web": "www.fruits-herrmann.fr",
+            "Page facebook": "https://www.facebook.com/La-ferme-Herrmann-Les-jardins-gourmands-418640164982157/?fref=ts",
+            "Défi": "Explorer les solutions pour améliorer le traitement des déchets bois et carton."
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.483274, 48.820832]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
             "name": "Ilot de la Meinau",
             "Description": "Agriculture raisonnée",
             "Adresse": "36 Route de la Fédération 67100 Strasbourg",
@@ -331,7 +317,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.604402, 48.503830]
+            "coordinates": [7.604402, 48.50383]
           }
         }
         ,
@@ -384,7 +370,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.448144, 48.421030]
+            "coordinates": [7.448144, 48.42103]
           }
         }
 
@@ -413,7 +399,7 @@
             "Email": "philippegeorge@aol.com",
             "Téléphone": "03 88 92 21 87",
             "Page facebook": "https://www.facebook.com/ALaBonneEpice/?fref=ts",
-            "Défi": "Présenter le stück à l’association des commerçants de Sélestat"
+            "Défi": "Présenter le stück à l?association des commerçants de Sélestat"
           },
           "geometry": {
             "type": "Point",
@@ -437,6 +423,25 @@
           "geometry": {
             "type": "Point",
             "coordinates": [7.753956, 48.580749]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "BIOGourmands",
+            "Description": "Restaurant, traiteur et salon de thé 100% bio à Obernai. Dégustation sur place et commande de plats à emporter (déjeuner et dîner). Pains et viennoiseries bio.",
+            "Adresse": "100 rue du Général Gouraud 67210 OBERNAI",
+            "Email": "info@biogourmands.bio",
+            "Téléphone": "03 88 95 01 68",
+            "Site web": "www.biogourmands.info/",
+            "Page facebook": "http://www.facebook.com/biogourmands",
+            "Défi": "Développer leur approvisionnement local"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.480722516775131, 48.462486229854946]
           }
         }
         ,
@@ -527,7 +532,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.416988, 48.696180]
+            "coordinates": [7.416988, 48.69618]
           }
         }
         ,
@@ -545,7 +550,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.692053, 48.586020]
+            "coordinates": [7.692053, 48.58602]
           }
         }
         ,
@@ -579,7 +584,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.767711, 48.587020]
+            "coordinates": [7.767711, 48.58702]
           }
         }
         ,
@@ -593,7 +598,7 @@
             "Email": "fournil.kristof@gmail.com",
             "Site web": "www.fournil-kristof.com",
             "Page facebook": "https://www.facebook.com/profile.php?id=100005456115812",
-            "Défi": "Afin de valoriser les déchets organiques et de réduire le bilan carbone sur le transport des œufs, il s'agit de créer un poulailler à proximité de l'activité"
+            "Défi": "Afin de valoriser les déchets organiques et de réduire le bilan carbone sur le transport des ?ufs, il s'agit de créer un poulailler à proximité de l'activité"
           },
           "geometry": {
             "type": "Point",
@@ -766,7 +771,7 @@
           "type": "Feature",
           "properties": {
             "name": "Nouvelle Coop - Ernolsheim-sur-Bruche",
-            "Description": "Magasin engagé et responsable : produits régionaux et/ou bios, proximité, service…",
+            "Description": "Magasin engagé et responsable : produits régionaux et/ou bios, proximité, service&hellip;",
             "Adresse": "5 rue de la Gare 67120 Ernolsheim-sur-Bruche",
             "Email": "ernolsheim@nouvellecoop.alsace",
             "Téléphone": "03.88.52.93.84",
@@ -785,7 +790,7 @@
           "type": "Feature",
           "properties": {
             "name": "Nouvelle Coop - La Robertsau",
-            "Description": "Magasin engagé et responsable : produits régionaux et/ou bios, proximité, service… ",
+            "Description": "Magasin engagé et responsable : produits régionaux et/ou bios, proximité, service&hellip; ",
             "Adresse": "85 Rue Boecklin, 67000 Strasbourg",
             "Email": "robertsau@nouvellecoop.alsace",
             "Téléphone": "03.88.67.99.25",
@@ -838,7 +843,7 @@
           "type": "Feature",
           "properties": {
             "name": "Banos Nathalie - Créatrice d'impression",
-            "Description": "Création d&#39;impressions destinées à la décoration d’intérieur (tentures, coussins, chemins de table, vide-poches… etc) édités en petites séries imprimées sur lin (motifs également déclinés en papeterie) et pièces uniques (lin et feutre).",
+            "Description": "Création d&#39;impressions destinées à la décoration d&rsquo;intérieur (tentures, coussins, chemins de table, vide-poches&hellip; etc) édités en petites séries imprimées sur lin (motifs également déclinés en papeterie) et pièces uniques (lin et feutre).",
             "Adresse": "53A rue de Molsheim 67280 Urmatt",
             "Email": "bleulichen@gmail.com",
             "Téléphone": "03 88 48 01 75",
@@ -848,7 +853,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.320490, 48.527943]
+            "coordinates": [7.32049, 48.527943]
           }
         }
         ,
@@ -911,8 +916,26 @@
         {
           "type": "Feature",
           "properties": {
+            "name": "Fernex Sébastien Artiste sculpteur",
+            "Description": "Création de sculptures en pierre et en bois Cours de sculptures sur pierre (gré) et bois, à la Maison forestière du Landsberg (St Nabor)",
+            "Adresse": "Maison forestière du Landsberg 67530 ST NABOR",
+            "Email": "sebfernex@gmail.com",
+            "Téléphone": "06 52 46 77 98",
+            "Site web": "www.sebastienfernex.fr",
+            "Défi": "Se fournir en gré dans un affleurement à proximité plutôt que d'aller dans le nord de l'Alsace"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.420749664306641, 48.428391822577176]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
             "name": "Filétoile",
-            "Description": "Tissage à la main depuis 1987, plus de 350 variétés de minéraux sélectionnés, à l’état brut, polis ou taillés, boutons et broches en matières naturelles, disponibles au détail, fils et de tissus au mètre Coupons et chutes pour patchwork.",
+            "Description": "Tissage à la main depuis 1987, plus de 350 variétés de minéraux sélectionnés, à l&rsquo;état brut, polis ou taillés, boutons et broches en matières naturelles, disponibles au détail, fils et de tissus au mètre Coupons et chutes pour patchwork.",
             "Adresse": "19 rue de la Wantzenau 67116 Reichstett",
             "Email": "filetoile@gmail.com",
             "Téléphone": "03 88 25 06 86",
@@ -930,7 +953,7 @@
           "type": "Feature",
           "properties": {
             "name": "Fleurs de Pays",
-            "Description": "Le stand Fleurs de Pays vous accueille au cœur de Strasbourg à deux pas de la place kleber sur le marché aux fleurs.",
+            "Description": "Le stand Fleurs de Pays vous accueille au c&oelig;ur de Strasbourg à deux pas de la place kleber sur le marché aux fleurs.",
             "Adresse": "18 Rue des Grandes Arcades 67000 Strasbourg",
             "Email": "info@fleursdepays.com",
             "Téléphone": "06 14 99 41 84",
@@ -957,7 +980,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.718250, 48.593980]
+            "coordinates": [7.71825, 48.59398]
           }
         }
         ,
@@ -1013,6 +1036,41 @@
           "geometry": {
             "type": "Point",
             "coordinates": [7.783522, 48.601986]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Métal-Archi MÉTALLERIE",
+            "Description": "Garde-corps, portail, escalier (avec visualisation du projet en 3D) Fours à tartes flambées Créations artistiques  ",
+            "Adresse": "6 rue Sébastien Brant 67880 INNENHEIM",
+            "Email": "metalarchi.info@gmx.com",
+            "Téléphone": "03 88 87 29 78",
+            "Page facebook": "https://www.facebook.com/chris.metal.archi/?fref=ts",
+            "Défi": "Tester l'utilisation de linux pour des logiciels de conception assistée par ordinateur et communiquer sur son expérimentation"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.575166099999933, 48.4982529]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Poterie : Ferreira Céline",
+            "Description": "Cours de modelage et de poterie, travail de développement de la créativité. Créations céramiques.",
+            "Adresse": "4 rue St Pierre et Paul 67560 ROSHEIM",
+            "Email": "celine.ferreira67@gmail.com",
+            "Téléphone": "06 74 97 79 45",
+            "Défi": "Se dégager du temps pour faire du bénévolat."
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.470528999999943, 48.496666]
           }
         }
         ,
@@ -1099,7 +1157,26 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.481680, 48.462260]
+            "coordinates": [7.48168, 48.46226]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Espace culturel des bâteliers",
+            "Description": "Centre créatif et artistique proposant des activités pour tous les âges.",
+            "Adresse": "4 rue des bâteliers 67000 STRASBOURG",
+            "Email": "espace-des-bateliers@orange.fr",
+            "Téléphone": "0388370594",
+            "Site web": "www.lesbateliers.com/",
+            "Page facebook": "https://www.facebook.com/espace.bateliers?fref=ts",
+            "Défi": "Réduire la quantité d'ordures ménagères"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.754791, 48.580902]
           }
         }
         ,
@@ -1108,7 +1185,7 @@
           "type": "Feature",
           "properties": {
             "name": "La Maison du Compost",
-            "Description": "L’association « la Maison du Compost  » a pour objet de promouvoir, de sensibiliser et/ou d’accompagner les citoyens désireux de pratiquer du compostage individuellement ou collectivement",
+            "Description": "L&rsquo;association « la Maison du Compost  » a pour objet de promouvoir, de sensibiliser et/ou d&rsquo;accompagner les citoyens désireux de pratiquer du compostage individuellement ou collectivement",
             "Adresse": "4 rue de Dachstein 67200 Strasbourg",
             "Email": "lamaisonducompost@gmail.com",
             "Site web": "lamaisonducompost.fr/",
@@ -1118,6 +1195,40 @@
           "geometry": {
             "type": "Point",
             "coordinates": [7.707369, 48.565092]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Nature et vie",
+            "Description": "Créée en 1978, l&#39;association Nature et Vie agit en faveur de la protection de la nature et la qualité de notre cadre de vie, essentiellement sur le secteur de Barr et environs.",
+            "Adresse": "90 rue de la vallée St Ulrich 67140 BARR",
+            "Email": "natureetvie@gmail.com",
+            "Téléphone": "03 68 05 34 38",
+            "Site web": "www.nature-et-vie.org/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.426216, 48.40545]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "SPACS",
+            "Description": "Service pour la Promotion de l&#39;ACtion Sociale (SPACS) de l&#39;Université de Strasbourg",
+            "Adresse": "Université de Strasbourg Service pour la Promotion de l'ACtion Sociale 43 rue Goethe 67000 STRASBOURG",
+            "Email": "spacs@unistra.fr",
+            "Téléphone": "03 68 85 20 00",
+            "Site web": "spacs.unistra.fr/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.767646, 48.584219]
           }
         }
 
@@ -1194,18 +1305,37 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Gilles Déom",
-            "Description": "Praticien et Enseignant en Ayurvéda. Maître Reiki. Méditation, alimentation, massages, yoga et respiration ",
-            "Adresse": "11 rue ampère 67100 Strasbourg",
-            "Email": "gilles@deommm.com",
-            "Téléphone": "06 59 57 20 98",
-            "Site web": "www.deommm.com/",
-            "Page facebook": "https://www.facebook.com/Gilles-D%C3%A9om-praticien-et-enseignant-en-ayurv%C3%A9da-219237458134514/timeline/",
-            "Défi": "Dans le but d'une meilleure transparence vis-à-vis es clients, il s'agit de mettre en place la traçabilité des produits proposés et de faire sa propre huile de massage"
+            "name": "Institut Effledy Rosheim",
+            "Description": "Espace de beauté et de bien-être : soins bio visage et corps ; modelages et rituels de bien-être ; relaxation sensorielle... Sur rendez-vous à Russ et à Rosheim Sur rendez-vous à Russ et à Rosheim",
+            "Adresse": "108 rue Général De Gaulle 67560 ROSHEIM",
+            "Email": "contact@effledy.fr",
+            "Téléphone": "06 24 88 49 41",
+            "Site web": "effledy.fr",
+            "Page facebook": "http://www.effledy.fr/",
+            "Défi": "Présenter le stück au réseau Proval (association des professionnels de la Vallée de la Bruche)"
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.783181, 48.557902]
+            "coordinates": [7.425583599999982, 48.4438087]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Institut Effledy Russ",
+            "Description": "Espace de beauté et de bien-être : soins bio visage et corps ; modelages et rituels de bien-être ; relaxation sensorielle... Sur rendez-vous à Russ et à Rosheim",
+            "Adresse": "3 rue des Genêts 67130 RUSS",
+            "Email": "contact@effledy.fr",
+            "Téléphone": "06 24 88 49 41",
+            "Site web": "effledy.fr",
+            "Page facebook": "effledy.fr",
+            "Défi": "Présenter le stück au réseau Proval (association des professionnels de la Vallée de la Bruche)"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.261471799999981, 48.49386399999999]
           }
         }
         ,
@@ -1242,7 +1372,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.736151, 48.583520]
+            "coordinates": [7.736151, 48.58352]
           }
         }
         ,
@@ -1270,7 +1400,7 @@
           "properties": {
             "name": "Néarmony",
             "Description": "Massage Bien-être, Reiki, Shiatsu. Ou comment retrouver détente et sérénité.   ",
-            "Adresse": "4 rue de vendenheim 67800 HOENHEIM",
+            "Adresse": "4 rue de vendenheim 67800 Hoenheim",
             "Email": "bernard.jacquin6@gmail.com",
             "Téléphone": "06 79 32 93 32",
             "Site web": "www.nearmony.com",
@@ -1279,7 +1409,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.751439, 48.627250]
+            "coordinates": [7.751439, 48.62725]
           }
         }
         ,
@@ -1292,6 +1422,7 @@
             "Adresse": "2 rue de la Laine 67160 Wissembourg",
             "Téléphone": "03 88 72 18 20",
             "Site web": "www.pascal-leval.fr",
+            "Page facebook": "www.pascal-leval.fr",
             "Défi": "Faciliter l'organisation d'une réunion de présentation du stück à la Graine"
           },
           "geometry": {
@@ -1315,7 +1446,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.742811, 48.590220]
+            "coordinates": [7.742811, 48.59022]
           }
         }
 
@@ -1421,7 +1552,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.770411, 48.585640]
+            "coordinates": [7.770411, 48.58564]
           }
         }
         ,
@@ -1482,9 +1613,13 @@
           "type": "Feature",
           "properties": {
             "name": "Marius GRIMAUD",
-            "Description": "Cours particuliers, soutien scolaire et conception de modules de formation.",
+            "Description": "Cours particuliers pour tous les âges en informatique, chant, solfège, piano, soutien scolaire jusqu&#39;en terminale, accompagnement dans la conception de modules de formation. Le tout avec une approche explicite, bienveillante, dans l&#39;objectif de vous aider à construire votre autonomie.",
             "Adresse": "7 rue de la Rheinmatt 67100 STRASBOURG",
-            "Site web": "https://grimaud.me/marius/enseignant/"
+            "Email": "marius.pro@grimaud.me",
+            "Téléphone": "09 50 16 77 22",
+            "Site web": "https://grimaud.me/marius/soutien-scolaire-strasbourg",
+            "Page facebook": "https://grimaud.me/marius/soutien-scolaire-strasbourg",
+            "Défi": "Appuyer le stück sur des actions d?éducation populaire destinées au jeune public"
           },
           "geometry": {
             "type": "Point",
@@ -1579,7 +1714,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.753650, 48.579965]
+            "coordinates": [7.75365, 48.579965]
           }
         }
         ,
@@ -1631,7 +1766,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.052342, 48.421017]
+            "coordinates": [7.757249099999967, 48.6070351]
           }
         }
         ,
@@ -1646,7 +1781,7 @@
             "Téléphone": "07 82 72 38 84",
             "Site web": "www.plombieravelo.com/",
             "Page facebook": "https://www.facebook.com/leplombieravelo?fref=ts",
-            "Défi": "Dans un élan de solidarité avec le Stück, et afin de créer du lien entre ses usagers, il s'agit d'animer un atelier relatif à son cœur de métier auprès des usagers du Stück."
+            "Défi": "Dans un élan de solidarité avec le Stück, et afin de créer du lien entre ses usagers, il s'agit d'animer un atelier relatif à son c?ur de métier auprès des usagers du Stück."
           },
           "geometry": {
             "type": "Point",
@@ -1778,6 +1913,24 @@
         {
           "type": "Feature",
           "properties": {
+            "name": "Diskcard",
+            "Description": "Récupération de données des particuliers (www.disckard.fr). Spécialiste RAID et serveurs.",
+            "Adresse": "8 rue du Bellay 67200 Strasbourg",
+            "Email": "contact@diskcard.fr",
+            "Téléphone": "07 81 71 48 17",
+            "Site web": "diskcard.fr",
+            "Défi": "Aider l'association Le Stück à sécuriser ses données informatiques."
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.6967687999999726, 48.5976905]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
             "name": "PC services Images et Son",
             "Description": "Propose une assistance en informatique, sur internet ainsi que du dépannage logiciel et matériel. ",
             "Adresse": "13 rue des Corps de Garde 67100 Strasbourg",
@@ -1789,6 +1942,24 @@
           "geometry": {
             "type": "Point",
             "coordinates": [7.779542, 48.559856]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Vodata",
+            "Description": "Récupération de données des professionnels (www.vodata.fr). Spécialiste RAID et serveurs.",
+            "Adresse": "8 rue du Bellay 67200 Strasbourg",
+            "Email": "contact@vodata.fr",
+            "Téléphone": "07 81 71 48 17",
+            "Site web": "www.vodata.fr",
+            "Défi": "Aider l'association Le Stück à sécuriser ses données informatiques."
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.6967687999999725, 48.5976904]
           }
         }
 
@@ -1822,7 +1993,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.698795, 48.590390]
+            "coordinates": [7.698795, 48.59039]
           }
         }
         ,
@@ -1859,7 +2030,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.762230, 48.593494]
+            "coordinates": [7.76223, 48.593494]
           }
         }
         ,
@@ -1868,7 +2039,7 @@
           "type": "Feature",
           "properties": {
             "name": "La Villa Meteor",
-            "Description": "Dans un site fabuleux, vivez une expérience unique et ludique autour de la fabrication de la bière et de l’histoire de METEOR.",
+            "Description": "Dans un site fabuleux, vivez une expérience unique et ludique autour de la fabrication de la bière et de l&rsquo;histoire de METEOR.",
             "Adresse": "6 rue du général Lebocq 67270 Hochfelden",
             "Email": "villa@brasserie-meteor.fr",
             "Téléphone": "03 88 02 22 44",
@@ -1971,13 +2142,13 @@
           "type": "Feature",
           "properties": {
             "name": "Boutique Oxfam",
-            "Description": "Les Magasins Oxfam vous proposent une autre façon d’acheter livres, CDs, DVD, vêtements, accessoires et objets pour la maison, en alliant plaisir de l’achat à portée de toutes les bourses et action solidaire.",
+            "Description": "Les Magasins Oxfam vous proposent une autre façon d&rsquo;acheter livres, CDs, DVD, vêtements, accessoires et objets pour la maison, en alliant plaisir de l&rsquo;achat à portée de toutes les bourses et action solidaire.",
             "Adresse": "5-7 Rue de la Division Leclerc 67000 STRASBOURG",
             "Email": "laboutiquestrasbourg@oxfamfrance.org",
             "Téléphone": "03 88 10 81 23",
             "Site web": "www.oxfamfrance.org/",
             "Page facebook": "https://www.facebook.com/OxfamLaBoutiqueStrasbourg/",
-            "Défi": "Formation des bénévoles du stück sur la prochaine campagne d’Oxfam"
+            "Défi": "Formation des bénévoles du stück sur la prochaine campagne d?Oxfam"
           },
           "geometry": {
             "type": "Point",
@@ -1990,7 +2161,7 @@
           "type": "Feature",
           "properties": {
             "name": "Bretz'Selle",
-            "Description": "Mise à disposition d’ateliers équipés. Promotion active du vélo basée sur l’apprentissage de la mécanique et l&#39;animation. ",
+            "Description": "Mise à disposition d&rsquo;ateliers équipés. Promotion active du vélo basée sur l&rsquo;apprentissage de la mécanique et l&#39;animation. ",
             "Adresse": "10 rue des bouchers 67000 Strasbourg",
             "Email": "contact@bretzselle.org",
             "Téléphone": "09 51 29 87 59",
@@ -2085,7 +2256,7 @@
             "Téléphone": "03 88 36 39 60",
             "Site web": "www.bistrotetchocolat.net/",
             "Page facebook": "https://www.facebook.com/BistrotetChocolat",
-            "Défi": "être plus précis et transparent sur les « achats responsables » notamment sur les labels (bio, équitable…) et sur la provenance locale des produits"
+            "Défi": "être plus précis et transparent sur les « achats responsables » notamment sur les labels (bio, équitable?) et sur la provenance locale des produits"
           },
           "geometry": {
             "type": "Point",
@@ -2122,7 +2293,7 @@
             "Téléphone": "03 88 35 45 30",
             "Site web": "www.como-resto.com/como_resto.php",
             "Page facebook": "https://www.facebook.com/Shacom-O-resto-1413968992232651/timeline",
-            "Défi": "Organisation d'un évènement trimestriel du stück dans ses locaux (réunion de collèges, stammstück, brunch, …)."
+            "Défi": "Organisation d'un évènement trimestriel du stück dans ses locaux (réunion de collèges, stammstück, brunch, ?)."
           },
           "geometry": {
             "type": "Point",
@@ -2180,7 +2351,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.717630, 48.581496]
+            "coordinates": [7.71763, 48.581496]
           }
         }
         ,
@@ -2235,7 +2406,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.742760, 48.583788]
+            "coordinates": [7.74276, 48.583788]
           }
         }
         ,
@@ -2325,11 +2496,11 @@
             "Téléphone": "03 88 25 20 20",
             "Site web": "le-rutsch.fr/",
             "Page facebook": "https://www.facebook.com/Le-Rutsch-810262925675876/timeline",
-            "Défi": "Trouver deux nouveaux fournisseurs bio (produits alimentaires, produits d'entretien …)"
+            "Défi": "Trouver deux nouveaux fournisseurs bio (produits alimentaires, produits d'entretien ?)"
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.757779, 48.579220]
+            "coordinates": [7.757779, 48.57922]
           }
         }
         ,
@@ -2338,7 +2509,7 @@
           "type": "Feature",
           "properties": {
             "name": "Le Troc'afé",
-            "Description": "Un bar alternatif au cadre chaleureux. Cela ressemble fortement à un vide-grenier où s’entassent les objets du quotidien.",
+            "Description": "Un bar alternatif au cadre chaleureux. Cela ressemble fortement à un vide-grenier où s&rsquo;entassent les objets du quotidien.",
             "Adresse": "8 rue du Faubourg de Saverne 67000 Strasbourg",
             "Téléphone": "03 88 23 23 29",
             "Page facebook": "https://www.facebook.com/letrocafe/info?tab=overview",
@@ -2347,6 +2518,43 @@
           "geometry": {
             "type": "Point",
             "coordinates": [7.740719, 48.585163]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Le mandala",
+            "Description": "Découvrez le restaurant Mandala, des plats qui mêlent saveurs vietnamiennes et traditions culinaires françaises. À déguster sur place ou à emporter !",
+            "Adresse": "rue du faubourg de saverne 67000 STRASBOURG",
+            "Email": "contact@mandala-strasbourg.fr",
+            "Site web": "www.mandala-strasbourg.fr/",
+            "Page facebook": "https://www.facebook.com/mandala.strasbourg/",
+            "Défi": "Structurer des liens entre les commerçants du Faubourg de Saverne"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.740433, 48.585448]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Loca dévore Food truck",
+            "Description": "Restauration mobile locavore et en grande partie bio",
+            "Adresse": "66 rue du Leyde 67130 WILDERSBACH",
+            "Email": "contact@locadevore.com",
+            "Téléphone": "0770379360",
+            "Site web": "https://www.locadevore.com/",
+            "Page facebook": "https://www.facebook.com/locadevore/?fref=ts",
+            "Défi": "Présenter le stück au drive fermier de Schirmeck"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.763875, 48.577418]
           }
         }
         ,
@@ -2364,7 +2572,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.492240, 48.544431]
+            "coordinates": [7.49224, 48.544431]
           }
         }
         ,
@@ -2477,24 +2685,6 @@
           "geometry": {
             "type": "Point",
             "coordinates": [7.761746, 48.574089]
-          }
-        }
-        ,
-
-        {
-          "type": "Feature",
-          "properties": {
-            "name": "Restaurant Au Jardin des Oliviers",
-            "Description": "Christelle et Didier vous accueillent et vous font découvrir leur cuisine inventive, entre saveurs d&#39;Italie et produits du marché.  ",
-            "Adresse": "4 rue de la Kirneck 67140 Barr",
-            "Email": "info@au-jardindesoliviers.com",
-            "Téléphone": "03 88 74 93 18",
-            "Site web": "www.au-jardindesoliviers.com",
-            "Défi": "Contribuer au développement du stück en faisant rentrer un fournisseur dans le réseau."
-          },
-          "geometry": {
-            "type": "Point",
-            "coordinates": [7.449805, 48.407764]
           }
         }
         ,
@@ -2639,7 +2829,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.722189, 48.598680]
+            "coordinates": [7.722189, 48.59868]
           }
         }
         ,
@@ -2656,7 +2846,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.433023, 48.405140]
+            "coordinates": [7.433023, 48.40514]
           }
         }
         ,
@@ -2733,6 +2923,44 @@
         {
           "type": "Feature",
           "properties": {
+            "name": "Frey-Bastien Nancy Ortho-bionomy",
+            "Description": "Praticienne en Ortho-Bionomy.",
+            "Adresse": "15 rue des Vosges 67560 ROSHEIM",
+            "Email": "info@nancyortho.fr",
+            "Téléphone": "06 33 25 97 70",
+            "Site web": "nancyortho.fr",
+            "Page facebook": "http://nancyortho.fr/",
+            "Défi": "Parler du Stück dans le réseau des ortho bionomystes"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.45970710000006, 48.4961093]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gilles Déom",
+            "Description": "Praticien et Enseignant en Ayurvéda. Maître Reiki. Méditation, alimentation, massages, yoga et respiration ",
+            "Adresse": "11 rue ampère 67100 Strasbourg",
+            "Email": "gilles@deommm.com",
+            "Téléphone": "06 59 57 20 98",
+            "Site web": "www.deommm.com/",
+            "Page facebook": "https://www.facebook.com/Gilles-D%C3%A9om-praticien-et-enseignant-en-ayurv%C3%A9da-219237458134514/timeline/",
+            "Défi": "Dans le but d'une meilleure transparence vis-à-vis es clients, il s'agit de mettre en place la traçabilité des produits proposés et de faire sa propre huile de massage"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.783181, 48.557902]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
             "name": "Guillaume RANCHOUX",
             "Description": "Naturopathie, somathothérapie, massages holistiques, reflexologies, harmonisation psycho-énergétique, développement personnel.",
             "Adresse": "2 rue des chevaliers 67600 Sélestat",
@@ -2745,6 +2973,24 @@
           "geometry": {
             "type": "Point",
             "coordinates": [7.455474, 48.259671]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Hypnothérapeute et coach Lara Berrezel",
+            "Description": "Praticienne en Hypnose Humaniste et certifiée RNCP en coaching professionnel",
+            "Adresse": "10, rue de Zurich 67000 Strasbourg",
+            "Email": "lara.berrezel@gmail.com",
+            "Téléphone": "06 52 88 87 44",
+            "Site web": "www.coaching-strasbourg-alsace.com",
+            "Défi": "Convaincre 3 commerçants de son quartier d'accepter le Stück"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.756309, 48.581103]
           }
         }
         ,
@@ -2768,24 +3014,6 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Lara Berrezel",
-            "Description": "Praticienne en Hypnose Humaniste et Ericksonienne, praticien en  coaching individuel et professionnel",
-            "Adresse": "10, rue de Zurich 67000 Strasbourg",
-            "Email": "lara.berrezel@gmail.com",
-            "Téléphone": "06 52 88 87 44",
-            "Site web": "www.ldb-hypno-coaching.fr/qui-suis-je",
-            "Défi": "Convaincre 3 commerçants de son quartier d'accepter le Stück"
-          },
-          "geometry": {
-            "type": "Point",
-            "coordinates": [7.756309, 48.581103]
-          }
-        }
-        ,
-
-        {
-          "type": "Feature",
-          "properties": {
             "name": "Marine Trevisan",
             "Description": "Cabinet d&#39;Energétique tradionnel chinoise, acupuncture, Tuina, ventouses, pharmacopée chinoise, réharmonisation énergétique",
             "Adresse": "6 Quai St-Jean 67000 Strasbourg",
@@ -2796,7 +3024,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.738322, 48.583260]
+            "coordinates": [7.738322, 48.58326]
           }
         }
         ,
@@ -2805,7 +3033,7 @@
           "type": "Feature",
           "properties": {
             "name": "N. Taiana, ostéopathe",
-            "Description": "L&#39;ostéopathie peut soulager différentes douleurs et problèmes fonctionnels. Nicolas Taiana vous reçoit sur rendez-vous pour une séance d’ostéopathie  dans son cabinet ou à domicile.",
+            "Description": "L&#39;ostéopathie peut soulager différentes douleurs et problèmes fonctionnels. Nicolas Taiana vous reçoit sur rendez-vous pour une séance d&rsquo;ostéopathie  dans son cabinet ou à domicile.",
             "Adresse": "8 place de la gare 67000 Strasbourg",
             "Email": "contact@osteopathe-taiana.com",
             "Téléphone": "03 88 23 24 33",
@@ -2823,7 +3051,7 @@
           "type": "Feature",
           "properties": {
             "name": "Nature à coeur",
-            "Description": "Des articles originaux et différents dans leur utilisation, et leurs propriétés dont le point commun est d’aller dans le sens de la vie, de l’énergie et du bien-être, en respectant l’Homme et la planète.",
+            "Description": "Des articles originaux et différents dans leur utilisation, et leurs propriétés dont le point commun est d&rsquo;aller dans le sens de la vie, de l&rsquo;énergie et du bien-être, en respectant l&rsquo;Homme et la planète.",
             "Adresse": "14 rue de la batterie 67118 Geispolsheim",
             "Email": "dl@natureacoeur.fr",
             "Téléphone": "03 88 39 86 20",
@@ -2834,6 +3062,23 @@
           "geometry": {
             "type": "Point",
             "coordinates": [7.685156, 48.538706]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Neeff Sophie",
+            "Description": "Kinésithérapeute, massage chinois, aromathérapie et élixirs floraux.",
+            "Adresse": "3 rue de Matzenheim 67230 SAND",
+            "Email": "sophieneeff@free.fr",
+            "Téléphone": "03 88 58 74 78",
+            "Défi": "Transférer ses actifs financiers vers de la finance responsable."
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.615280100000064, 48.3832775]
           }
         }
         ,
@@ -2886,7 +3131,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.753958, 48.581820]
+            "coordinates": [7.753958, 48.58182]
           }
         }
         ,
@@ -3006,7 +3251,26 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.769600, 48.584945]
+            "coordinates": [7.7696, 48.584945]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Anticipation Chapiteaux",
+            "Description": "Vente et location de chapiteaux et bâches Impression numérique grands formats",
+            "Adresse": "3 Rue Simmesberg 67290 WINGEN SUR MODER",
+            "Email": "anticipationchapiteaux@hotmail.fr",
+            "Téléphone": "06 63 55 62 61",
+            "Site web": "anticipation-chapiteaux.fr",
+            "Page facebook": "https://www.facebook.com/AnticipationChapiteaux/?fref=ts",
+            "Défi": "Ouvrir un compte dans une banque solidaire"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.36991880000005, 48.9243824]
           }
         }
         ,
@@ -3041,7 +3305,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.738542, 48.584500]
+            "coordinates": [7.738542, 48.5845]
           }
         }
         ,
@@ -3050,7 +3314,7 @@
           "type": "Feature",
           "properties": {
             "name": "Défi Ecologique",
-            "Description": "Aménagements « biodiversité » (conseil et intervention), diagnostics, signalétique pédagogique, BioContrôle (lutte inondative et/ou intégrée) ou encore études d’impacts pour institutionnels, particuliers et professionnels.",
+            "Description": "Aménagements « biodiversité » (conseil et intervention), diagnostics, signalétique pédagogique, BioContrôle (lutte inondative et/ou intégrée) ou encore études d&rsquo;impacts pour institutionnels, particuliers et professionnels.",
             "Adresse": "16 rue de Verdun 67600 Sélestat",
             "Email": "julien@defi-ecologique.com",
             "Téléphone": "06 71 10 97 33",
@@ -3061,6 +3325,25 @@
           "geometry": {
             "type": "Point",
             "coordinates": [7.746569, 48.583803]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Déménager seul",
+            "Description": "Location de véhicules utilitaires et camions de déménagement.",
+            "Adresse": "19 Rue des Frères Lumière 67201 ECKBOLSHEIM",
+            "Email": "strasbourg@demenagerseul.com",
+            "Téléphone": "03 88 23 28 82",
+            "Site web": "www.demenagerseul.com/agences-demenagement/Strasbourg-Eckbolsheim/68/Alsace/67201/Bas-Rhin",
+            "Page facebook": "https://www.facebook.com/demenagerseul.strasbourg/?fref=ts",
+            "Défi": "Mettre en ?uvre la rénovation de véhicules d'occasion pour la location de camions de déménagement"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.67922, 48.589095]
           }
         }
         ,
@@ -3114,7 +3397,25 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.742811, 48.590220]
+            "coordinates": [7.742811, 48.59022]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Métal-Archi ARCHITECTURE",
+            "Description": "Architecte : formulaires et plans de permis.",
+            "Adresse": "6 rue Sébastien Brant 67880 INNENHEIM",
+            "Email": "metalarchi.info@gmx.com",
+            "Téléphone": "03 88 87 29 78",
+            "Page facebook": "https://www.facebook.com/chris.metal.archi/?fref=ts",
+            "Défi": "Tester l'utilisation de linux pour des logiciels de conception assistée par ordinateur et communiquer sur son expérimentation"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [7.575166099999934, 48.4982530]
           }
         }
         ,
@@ -3177,10 +3478,9 @@
           "type": "Feature",
           "properties": {
             "name": "Riehl Colette",
-            "Description": "Formation en techniques psychocorporelles : Tai Ji Quan, Qi Gong, Relaxation, Gym douce Antropologie sociale et culturelle : éthnologie  ",
-            "Adresse": "4 rue du Mâcon 67100 Strasbourg",
-            "Email": "colette.riehl@gmail.com",
-            "Téléphone": "03 6975 45 81",
+            "Description": "Formation en techniques psychocorporelles : Tai Ji Quan, Qi Gong, Relaxation, Gym douce Antropologie sociale et culturelle : Éthnologie",
+            "Adresse": " 67100 Strasbourg",
+            "Téléphone": "03 69 78 45 81",
             "Défi": "Experimenter la participation consciente et en déduire un juste prix de ses prestations"
           },
           "geometry": {
@@ -3227,7 +3527,7 @@
           "type": "Feature",
           "properties": {
             "name": "Cyclorama",
-            "Description": "Transport urbain de personnes en Vélo-Calèche, Vélo-taxi, Rickshaw, Pedicab…",
+            "Description": "Transport urbain de personnes en Vélo-Calèche, Vélo-taxi, Rickshaw, Pedicab&hellip;",
             "Adresse": "99 route du Polygone 67100 Strasbourg",
             "Email": "cyclorama.strasbourg@gmail.com",
             "Téléphone": "06 16 56 22 62",
@@ -3308,7 +3608,7 @@
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [7.731705, 48.580090]
+            "coordinates": [7.731705, 48.58009]
           }
         }
         ,
@@ -3368,7 +3668,7 @@
           "type": "Feature",
           "properties": {
             "name": "La Java de Lili",
-            "Description": "Boutique qui vous propose des bijoux et accessoires de créateurs, une sélection de vêtements ainsi que des meubles d&#39;appoints. La poésie s’invite dans votre quotidien avec des collections choisies au \"coup de coeur\" .",
+            "Description": "Boutique qui vous propose des bijoux et accessoires de créateurs, une sélection de vêtements ainsi que des meubles d&#39;appoints. La poésie s&rsquo;invite dans votre quotidien avec des collections choisies au \"coup de coeur\" .",
             "Adresse": "6 rue du Marteau 67600 Sélestat",
             "Email": "lajavadelili@gmail.com",
             "Téléphone": "03 88 74 45 03",
