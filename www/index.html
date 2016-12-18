@@ -136,11 +136,13 @@
     }
     
     function onAltClick(e){
-        if (spotNewMarker){
-            map.removeLayer(spotNewMarker);
+        if (localStorage.modifSpot){
+            if (spotNewMarker){
+                map.removeLayer(spotNewMarker);
+            }
+            spotNewMarker=L.marker(e.latlng,{icon:lstCat[0].icon}).bindPopup(htmlNewSpot(e.latlng)).addTo(map);
+            spotNewMarker.openPopup();
         }
-        spotNewMarker=L.marker(e.latlng,{icon:lstCat[0].icon}).bindPopup(htmlNewSpot(e.latlng)).addTo(map);
-        spotNewMarker.openPopup();
     }
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);

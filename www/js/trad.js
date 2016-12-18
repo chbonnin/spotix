@@ -33,3 +33,4 @@ tradSpots=          "spots";
 tradSupprimerCeSpot="Supprimer !";
 tradTelephone=      "Téléphone";
 tradToutes=         "Toutes";
+tradVersion=        "Version : ";
