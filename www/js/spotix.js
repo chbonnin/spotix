@@ -151,7 +151,7 @@ function createSpot(){
 function fillSearch(){
     var strRet="<div class='ui-input-search ui-body-inherit ui-corner-all ui-shadow-inset'>";
     
-    strRet+="<input type='search' id='idSearchInput' class='ui-input-has-clear' value='"+strSearch+"'></div>";
+    strRet+="<input type='search' id='idSearchInput' class='ui-input-has-clear' value='"+strSearch+"'>";
     $("#idSearchDiv").html(strRet);
     $("#idSearchInput").on("change keyup paste search", changeSearch);
 }
