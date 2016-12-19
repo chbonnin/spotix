@@ -203,14 +203,14 @@ function stringLstSpot(){
             strCat=spot.categorie;
         }
         strRet+= spot.nom+"\n";
-        strRet+=(spot.description ? spot.description : "-")+"\n";
+        strRet+=(spot.description ? spot.description.replace(/\n/g,". ") : "-")+"\n";
         strRet+=(spot.adresse ? spot.adresse : "-")+"\n";
         if (spot.email)         strRet+=spot.email+"\n";
         if (spot.telephone)     strRet+=spot.telephone+"\n";
         if (spot.site)          strRet+=spot.site+"\n";
         if (spot.facebook)      strRet+= spot.facebook+"\n";
-        if (spot.observation)   strRet+=spot.observation+"\n";
-        if (spot.horaire)       strRet+=spot.horaire+"\n";
+        if (spot.observation)   strRet+=spot.observation.replace(/\n/g,". ")+"\n";
+        if (spot.horaire)       strRet+=spot.horaire.replace(/\n/g,". ")+"\n";
         strRet+= spot.latitude+","+spot.longitude+"\n\n";
     }
     return strRet;
@@ -219,24 +219,31 @@ function stringLstSpot(){
 function csvLstSpot(){
     var strRet='', strCat="";
     lstSpot.sort(compareSpot);
+    strRet+="Nom,Adresse,Code postal,Ville,Latitude,Longitude,EMail,Téléphone,Url,Page facebook,Domaine,Description,Défi,Horaires\n";
     for (iSpot=0;iSpot<lstSpot.length; iSpot++)    {
         spot=lstSpot[iSpot];
-        if (spot.categorie != strCat){
-            strRet+=spot.categorie+"\n\n";
-            strCat=spot.categorie;
-        }
-        strRet+= spot.nom+"\n";
-        strRet+=(spot.description ? spot.description : "-")+"\n";
-        strRet+=(spot.adresse ? spot.adresse : "-")+"\n";
-        if (spot.email)         strRet+=spot.email+"\n";
-        if (spot.telephone)     strRet+=spot.telephone+"\n";
-        if (spot.site)          strRet+=spot.site+"\n";
-        if (spot.facebook)      strRet+= spot.facebook+"\n";
-        if (spot.observation)   strRet+=spot.observation+"\n";
-        if (spot.horaire)       strRet+=spot.horaire+"\n";
-        strRet+= spot.latitude+","+spot.longitude+"\n\n";
+        strRet+= champCsv(spot.nom)+",";
+        strRet+= champCsv(spot.adresse)+",,,";
+        strRet+= spot.latitude+","+spot.longitude+",";
+        strRet+= champCsv(spot.email)+",";
+        strRet+= spot.telephone+",";
+        strRet+= spot.site+",";
+        strRet+= spot.facebook+",";
+        strRet+= lstCat[mapCat[spot.categorie]].num+",";
+        strRet+= champCsv(spot.description)+",";        
+        strRet+=champCsv(spot.observation)+",";
+        strRet+=champCsv(spot.horaire)+"\n";
     }
     return strRet;
+}
+//Transforme un contenu en champ CSV avec séparateurs si besoin
+function champCsv(strContent){
+    if (strContent===undefined)
+        return '';
+    else if (strContent.indexOf('"')>=0 || strContent.indexOf(',')>=0)
+        return '"'+strContent.replace(/[""]/g,'""')+'"';
+    else
+        return strContent;
 }
 //Trouve le spot de la liste correspondant à un numéro donné
 function findSpotNum(numSpot){
