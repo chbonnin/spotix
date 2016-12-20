@@ -193,7 +193,9 @@ for record in arrLines:
           },
           "geometry": {
             "type": "Point",
-            "coordinates": ['''+record[mapCol["long"]]+', '+record[mapCol["lat"]]+''']
+            "coordinates": [
+              '''+record[mapCol["long"]]+',\n              '+record[mapCol["lat"]]+'''
+	    ]
           }
         }
 '''
