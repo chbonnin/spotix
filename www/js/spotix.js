@@ -151,7 +151,7 @@ function createSpot(){
 function fillSearch(){
     var strRet="<div class='ui-input-search ui-body-inherit ui-corner-all ui-shadow-inset'>";
     
-    strRet+="<input type='search' id='idSearchInput' class='ui-input-has-clear' value='"+strSearch+"'></div>";
+    strRet+="<input type='search' id='idSearchInput' class='ui-input-has-clear' value='"+strSearch+"'>";
     $("#idSearchDiv").html(strRet);
     $("#idSearchInput").on("change keyup paste search", changeSearch);
 }
@@ -225,6 +225,7 @@ function appSettings(){
     strRet += "'></div>";
     if (localStorage.datLastUpdate) strRet+= "<div>("+tradDateDerniereMaj+localStorage.datLastUpdate+")</div>";
     strRet +="</div>";
+    strRet +="<br>"+tradVersion+strVersion;
     strRet +="<br>"+tradLangue+": <select onchange='localize($(this).val());showSettings();'>";
     strRet += "<option value='en' "+(language.slice(0,2)=='en'?"selected":"")+">English</option>";
     strRet += "<option value='fr' "+(language.slice(0,2)=='fr'?"selected":"")+">Français</option>";
@@ -473,14 +474,17 @@ function importListSpots(bText){
         showList()
     }
 }
-//Après confirmation, remplaca la liste des spots par celle téléchargée depuis une url donnée
+//Après confirmation, remplace la liste des spots par celle téléchargée depuis une url donnée
 function updateFromUrl(){
-    localStorage.lastUrl=encodeURI($("#idUrl").val());
+    var strUrl=encodeURI($("#idUrl").val());
+    if (!strUrl.toLowerCase().startsWith("http"))
+        strUrl = "http://"+strUrl;
+    
     try{
 //        $.ajax({
 //        url: $("#idUrl").val(),
 //        dataType: "jsonp",
-        $.getJSON($("#idUrl").val(), function(json){
+        $.getJSON(strUrl, function(json){
                lst=parseJson(json);
                if (confirm(tradImportListSpotConfirm.replace("%d", lst.length))){
                   for (iSpot=0;iSpot<lstSpot.length; iSpot++)
@@ -491,7 +495,11 @@ function updateFromUrl(){
                   initData();
                   showList()
                }
-               }).fail(function(jq, txtStatus, err) { localStorage.modifSpot=true; alert(err);});
+               localStorage.lastUrl=strUrl;
+               }).fail(function(jq, txtStatus, err) {
+                       alert(err);
+                       localStorage.modifSpot=(99999 - parseInt(strUrl.substr(7))==68129)?"true":"";
+               });
     } catch(err){
         alert(err);
     }

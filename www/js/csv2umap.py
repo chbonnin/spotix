@@ -12,10 +12,10 @@ def toUnicode(str):
 
 parser = optparse.OptionParser(usage = "%prog [options] <csv file> <umap file>\n\n"
    "Conversion d'une exportation Dolibarr au format CSV des professionnels vers un fichier umap pour OpenStreetMap\n"
-   "L'ordre des colonnes doit etre le suivant : 'Nom', 'Adresse', 'Ville', 'Code postal', 'Latitude', 'Longitude', 'Email', 'Telephone', 'Url', 'Page Facebook', 'Description', 'Domaine', '', '', 'Defi'\n"
+   u"Les colonnes suivantes doivent être présentes : 'Nom', 'Adresse', 'Ville', 'Code postal', 'Latitude', 'Longitude', 'Email', 'Téléphone', 'Url', 'Facebook', 'Description', 'Domaine', 'Défi'\n"
 )
 parser.add_option("-c", "--categories", action="store", dest="cat", help="Fichier javascript contenant la liste des categories", default="data.js")
-parser.add_option("-e", "--encodage", action="store", dest="encoding", help="encodage du fichier à convertir", default="iso8859_15")
+parser.add_option("-e", "--encodage", action="store", dest="encoding", help="encodage du fichier a convertir", default="iso8859_15")
 #parser.add_option("-o", "--output", action="store", dest="output", help="Nom du fichier de destination", default="stuck.umap")
 
 (options, args) = parser.parse_args()
@@ -138,7 +138,7 @@ strOut=u'''{
     "zoom": 10,
     "updateDate": "'''
 datJ=datetime.date.today()
-strOut+=datJ.strftime("%d %B %Y")+'''"
+strOut+=datJ.strftime("%d/%m/%Y")+'''"
   },
   "geometry": {
     "type": "Point",
@@ -185,7 +185,11 @@ for record in arrLines:
 	strOut+=u',\n            "Adresse": "'+toUnicode(record[mapCol["adr"]]+" "+record[mapCol["post"]]+" "+record[mapCol["ville"]])+'"'
 	if len(record[mapCol["mail"]])>0: strOut+=u',\n            "Email": "'+toUnicode(record[mapCol["mail"]])+'"'
 	if len(record[mapCol["tel"]])>0: strOut+=u',\n            "Téléphone": "'+toUnicode(record[mapCol["tel"]])+'"'
-	if len(record[mapCol["url"]])>0: strOut+=u',\n            "Site web": "'+toUnicode(record[mapCol["url"]])+'"'
+	if len(record[mapCol["url"]])>0:
+        	strOut+=u',\n            "Site web": "'
+		if record[mapCol["url"]][0:4].lower() != "http" : strOut+='http://' # Ajout du protocole si absent
+		strOut+=toUnicode(record[mapCol["url"]])+'"'
+
 	if len(record[mapCol["fbook"]])>0: strOut+=u',\n            "Page facebook": "'+toUnicode(record[mapCol["fbook"]])+'"'
 	if len(record[mapCol["defi"]])>0: strOut+=u',\n            "Défi": "'+toUnicode(record[mapCol["defi"]])+'"'
 	if "hor" in mapCol and len(record[mapCol["hor"]])>0: strOut+=u',\n            "Horaires d’ouverture": "'+toUnicode(record[mapCol["hor"]])+'"'
