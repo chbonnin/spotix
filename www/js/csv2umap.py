@@ -76,13 +76,14 @@ with open(args[0],'rb') as fCsv:
 				iCol+=1
 
 			#print "colonnes : ",mapCol
-		else:
+		elif len(line)>0:
 			arrLines.append(line)
 			try: 
-				i=int(line[mapCol["cat"]])
+				strCat=line[mapCol["cat"]]
+				i=int(strCat)
 				if not i in mapCat: print "Erreur : le domaine de la ligne",iLig,"n'est pas dans la liste des catégories\n",line,'\n'
 			except:
-				print "Erreur : le domaine de la ligne",iLig,"est incorrect (",line[mapCol["cat"]],":\n",line,'\n'
+				print "Erreur : le domaine de la ligne",iLig,"est incorrect (",strCat,"):\n",line,'\n'
 			try: 
 				f=float(line[mapCol["lat"]])
 			except:
