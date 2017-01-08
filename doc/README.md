@@ -11,18 +11,29 @@ Sur un smartphone, les données mobiles ne sont utilisées que pour afficher les
 
 ### Carte
 La carte permet de se localiser ainsi que le lieux de la liste dans le voisinage. Le bouton en haut à droite recentre la carte sur la position courante indiquée par un cercle rouge.
+
 ![Carte](doc/screenshots/carte.jpg)
 
 Toucher une des icônes affiche une bulle contenant le nom du lieu ainsi qu'une description, l'adresse et un lien permettant de consulter les autres informations.
+
 ![Carte avec bulle](doc/screenshots/carteBulle.jpg)
 
 ### Liste des lieux
 ![Liste des lieux](doc/screenshots/liste.jpg)
+
 Cette liste contient les lieux des catégories sélectionnées (toutes par défaut).
 En haut de la liste se trouve une zone de recherche permettant de chercher un texte dans les champs nom, description, observation (défi).
 Une ligne supplémentaire en bas de la liste donne le nombre d'éléments affichés.
 
 ### Catégories
 ![Catégories](doc/screenshots/categories.jpg)
+
 Cette liste permet de filtrer les éléments présents dans la liste précédente et sur la carte.
 La ligne supplémentaires "Toutes" en première position permet de (dé)sélectionner toute la liste d'un coup.
+Si une catégorie est déselectionnée, l'icône du filtre en bas de l'écran change pour indiquer qu'un filtre est actif.
+
+### Fonctionnement dans un navigateur
+
+L'intérêt est surtout de permettre le test sur ordinateur avant l'installation sur mobile.
+
+Une fois les fichiers source récupérer il suffit d'ouvrir le fichier ``www/index.html`` et cliquer sur le symbole de localisation en haut à droite pour afficher la carte.
