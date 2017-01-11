@@ -26,6 +26,7 @@ if len(args)<2:
 
 fData=open(options.cat)
 debut=False
+CAT_CHANGE="50"
 strJson=""
 for line in fData:
 	if debut:
@@ -40,15 +41,15 @@ for line in fData:
 
 fData.close()
 #print strJson
-data=json.loads(strJson)
-mapCat={}
+data=json.loads(strJson)#objet json contenant la liste des objets catégorie (contenant les champs name, color, image, num, id, iconUrl)
+mapCat={}#table de correspondance entre numéro de catégorie et nom de catégorie
 for cat in data:
 	if "num" in cat:
 		mapCat[cat["num"]]=cat
 
 #print mapCat
-arrLines=[]
-mapCol={}
+arrLines=[]#liste de lignes du fichier csv, chaque ligne est une liste de champs 
+mapCol={}#table de correspondance entre les champs à importer et les numéros de colonne du fichier csv
 bHeader=True
 iLig=0
 with open(args[0],'rb') as fCsv:
@@ -73,6 +74,7 @@ with open(args[0],'rb') as fCsv:
 				elif "description" in colName.lower(): mapCol["desc"]=iCol
 				elif u"défi" in unicode(colName.lower(), options.encoding): mapCol["defi"]=iCol
 				elif "horaire" in colName.lower(): mapCol["hor"]=iCol
+				elif "change" in colName.lower(): mapCol["chg"]=iCol
 				iCol+=1
 
 			#print "colonnes : ",mapCol
@@ -82,6 +84,10 @@ with open(args[0],'rb') as fCsv:
 				strCat=line[mapCol["cat"]]
 				i=int(strCat)
 				if not i in mapCat: print "Erreur : le domaine de la ligne",iLig,"n'est pas dans la liste des catégories\n",line,'\n'
+				if line[mapCol["chg"]]=="1":
+					ligChange=line[:]#pour cloner le tableau
+					ligChange[mapCol["cat"]]=CAT_CHANGE #catégorie des bureaux de change
+					arrLines.append(ligChange)#dupplication de la ligne
 			except:
 				print "Erreur : le domaine de la ligne",iLig,"est incorrect (",strCat,"):\n",line,'\n'
 			try: 
@@ -93,7 +99,7 @@ with open(args[0],'rb') as fCsv:
 			except:
 				print "Erreur : la longitude de la ligne",iLig,"est incorrecte :\n",line,'\n'
 
-arrLines.sort(key=lambda line: (int(line[mapCol["cat"]]), line[mapCol["nom"]]))
+arrLines.sort(key=lambda line: (int(line[mapCol["cat"]]), line[mapCol["nom"]])) #classement par num de categorie puis nom
 strOut=u'''{
   "type": "umap",
   "properties": {
@@ -150,19 +156,21 @@ strOut+=datJ.strftime("%d/%m/%Y")+'''"
   },
   "layers": [
 '''
+strOutUmap=strOut
 iCat=-1
 for record in arrLines:
+	strAdd=""
 	cat=mapCat[int(record[mapCol["cat"]])]
 	if iCat != int(record[mapCol["cat"]]):#nouvelle categorie
 		if iCat>=0:	#fin de la categorie precedente
-			strOut+='\n    ]\n   },\n'
+			strAdd+='\n    ]\n   },\n'
 
 		iCat=int(record[mapCol["cat"]])
-		strOut+='''
+		strAdd+='''
     {
       "type": "FeatureCollection",
 '''
-		strOut+= u'''
+		strAdd+= u'''
       "_storage": {
         "displayOnLoad": true,
         "name": "'''+ cat["name"]+'''",
@@ -174,27 +182,27 @@ for record in arrLines:
       "features": [
 '''
 	else:#suite d'une categorie
-		strOut+='        ,\n'
+		strAdd+='        ,\n'
 
-	strOut+= u'''
+	strAdd+= u'''
         {
           "type": "Feature",
           "properties": {
 '''
-	strOut+=u'            "name": "'+toUnicode(record[mapCol["nom"]])+'"'
-	if len(record[mapCol["desc"]])>0: strOut+=u',\n            "Description": "'+toUnicode(record[mapCol["desc"]])+'"'
-	strOut+=u',\n            "Adresse": "'+toUnicode(record[mapCol["adr"]]+" "+record[mapCol["post"]]+" "+record[mapCol["ville"]])+'"'
-	if len(record[mapCol["mail"]])>0: strOut+=u',\n            "Email": "'+toUnicode(record[mapCol["mail"]])+'"'
-	if len(record[mapCol["tel"]])>0: strOut+=u',\n            "Téléphone": "'+toUnicode(record[mapCol["tel"]])+'"'
+	strAdd+=u'            "name": "'+toUnicode(record[mapCol["nom"]])+'"'
+	if len(record[mapCol["desc"]])>0: strAdd+=u',\n            "Description": "'+toUnicode(record[mapCol["desc"]])+'"'
+	strAdd+=u',\n            "Adresse": "'+toUnicode(record[mapCol["adr"]]+" "+record[mapCol["post"]]+" "+record[mapCol["ville"]])+'"'
+	if len(record[mapCol["mail"]])>0: strAdd+=u',\n            "Email": "'+toUnicode(record[mapCol["mail"]])+'"'
+	if len(record[mapCol["tel"]])>0: strAdd+=u',\n            "Téléphone": "'+toUnicode(record[mapCol["tel"]])+'"'
 	if len(record[mapCol["url"]])>0:
-        	strOut+=u',\n            "Site web": "'
-		if record[mapCol["url"]][0:4].lower() != "http" : strOut+='http://' # Ajout du protocole si absent
-		strOut+=toUnicode(record[mapCol["url"]])+'"'
+        	strAdd+=u',\n            "Site web": "'
+		if record[mapCol["url"]][0:4].lower() != "http" : strAdd+='http://' # Ajout du protocole si absent
+		strAdd+=toUnicode(record[mapCol["url"]])+'"'
 
-	if len(record[mapCol["fbook"]])>0: strOut+=u',\n            "Page facebook": "'+toUnicode(record[mapCol["fbook"]])+'"'
-	if len(record[mapCol["defi"]])>0: strOut+=u',\n            "Défi": "'+toUnicode(record[mapCol["defi"]])+'"'
-	if "hor" in mapCol and len(record[mapCol["hor"]])>0: strOut+=u',\n            "Horaires d’ouverture": "'+toUnicode(record[mapCol["hor"]])+'"'
-	strOut+= '''
+	if len(record[mapCol["fbook"]])>0: strAdd+=u',\n            "Page facebook": "'+toUnicode(record[mapCol["fbook"]])+'"'
+	if len(record[mapCol["defi"]])>0: strAdd+=u',\n            "Défi": "'+toUnicode(record[mapCol["defi"]])+'"'
+	if "hor" in mapCol and len(record[mapCol["hor"]])>0: strAdd+=u',\n            "Horaires d’ouverture": "'+toUnicode(record[mapCol["hor"]])+'"'
+	strAdd+= '''
           },
           "geometry": {
             "type": "Point",
@@ -204,17 +212,34 @@ for record in arrLines:
           }
         }
 '''
+	if record[mapCol["cat"]]==CAT_CHANGE:
+		strOut+=strAdd
+	else:
+		strOut+=strAdd
+		strOutUmap+=strAdd
 
+strAdd=""
 if iCat>=0:	#fin de la derniere categorie
-	strOut+='\n    ]\n   }\n'
+	strAdd+='\n    ]\n   }\n'
 
-strOut+='''  ]
+strAdd+='''  ]
 }
 '''
 
-with codecs.open(args[1], encoding='utf-8', mode='w') as fUmap: 
-	fUmap.write(strOut)
+strOut+=strAdd
+strOutUmap+=strAdd
+strUmap=args[1]
+
+if strUmap[-5:]==".umap":
+	strSpot=strUmap[:-5]
+else:
+	strSpot=strUmap
+	strUmap+=".umap"
+
+with codecs.open(strUmap, encoding='utf-8', mode='w') as fUmap: 
+	fUmap.write(strOutUmap)
 
 
-
+with codecs.open(strSpot, encoding='utf-8', mode='w') as fSpot: 
+	fSpot.write(strOut)
 
