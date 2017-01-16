@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.iphonecoolapps.spotix" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>spotix</name>
+<widget id="eu.lestuck.lestuck" version="0.5">
+    <name>Le Stuck</name>
     <description>
-Geolocation app that manages lists of Points Of Interests or spots
+Geolocation app that manages lists of Points Of Interests 
     </description>
-    <author email="meridian3d@gmail.com" href="https://sites.google.com/site/bonniniphoneapps/spotix">
+    <author email="appli@lestuck.eu" href="http://lestuck.eu">
         Christian Bonnin
     </author>
     <content src="index.html" />

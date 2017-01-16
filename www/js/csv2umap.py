@@ -12,10 +12,11 @@ def toUnicode(str):
 
 parser = optparse.OptionParser(usage = "%prog [options] <csv file> <umap file>\n\n"
    "Conversion d'une exportation Dolibarr au format CSV des professionnels vers un fichier umap pour OpenStreetMap\n"
-   u"Les colonnes suivantes doivent être présentes : 'Nom', 'Adresse', 'Ville', 'Code postal', 'Latitude', 'Longitude', 'Email', 'Téléphone', 'Url', 'Facebook', 'Description', 'Domaine', 'Défi'\n"
+   u"Deux fichiers sont créés : un avec l'extension .umap pour uMap/OpenStreetMap, l'autre sans extension pour l'application smartphone\n"
+   u"Les colonnes suivantes doivent être présentes : 'Nom', 'Adresse', 'Ville', 'Code postal', 'Latitude', 'Longitude', 'Email', 'Téléphone', 'Url', 'Facebook', 'Description', 'Domaine', 'Défi', 'Change'\n"
 )
-parser.add_option("-c", "--categories", action="store", dest="cat", help="Fichier javascript contenant la liste des categories", default="data.js")
-parser.add_option("-e", "--encodage", action="store", dest="encoding", help="encodage du fichier a convertir", default="iso8859_15")
+parser.add_option("-c", "--categories", action="store", dest="cat", help=u"Fichier javascript contenant la liste des categories (par défaut data.js dans le répertoire courant)", default="data.js")
+parser.add_option("-e", "--encodage", action="store", dest="encoding", help=u"encodage du fichier à convertir", default="iso8859_15")
 #parser.add_option("-o", "--output", action="store", dest="output", help="Nom du fichier de destination", default="stuck.umap")
 
 (options, args) = parser.parse_args()

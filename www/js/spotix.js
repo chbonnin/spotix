@@ -219,10 +219,9 @@ function appSettings(){
 	    strRet += "<div><a href='#' class='ui-btn' onclick='initList(true)'>"+tradResetListSpot+"</a></div>";
 	    strRet += "<div id='idImport'><a href='#' class='ui-btn' onclick='importListParse()'>"+tradImportListSpot+"</a></div>";
     }
-    strRet += "<div><a href='#' class='ui-btn' onclick='updateFromUrl()'>"+tradMettreAJourDepuis
-    strRet += "</a><div class='ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset'><input type='text' id='idUrl' placeholder='URL' value='";
+    strRet += "<div>"+tradMajListeLieux+"<div class='ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset'><input type='text' id='idUrl' placeholder='URL' value='";
     if (localStorage.lastUrl) strRet+= localStorage.lastUrl;
-    strRet += "'></div>";
+    strRet += "'></div><a href='#' class='ui-btn' onclick='updateFromUrl($(\"#idUrl\").val(), false)'>"+tradMettreAJour+"</a>";
     if (localStorage.datLastUpdate) strRet+= "<div>("+tradDateDerniereMaj+localStorage.datLastUpdate+")</div>";
     strRet +="</div>";
     strRet +="<br>"+tradVersion+strVersion;
@@ -475,8 +474,8 @@ function importListSpots(bText){
     }
 }
 //Après confirmation, remplace la liste des spots par celle téléchargée depuis une url donnée
-function updateFromUrl(){
-    var strUrl=encodeURI($("#idUrl").val());
+function updateFromUrl(strUrl, bForce){
+    strUrl=encodeURI(strUrl);
     if (!strUrl.toLowerCase().startsWith("http"))
         strUrl = "http://"+strUrl;
     
@@ -486,14 +485,15 @@ function updateFromUrl(){
 //        dataType: "jsonp",
         $.getJSON(strUrl, function(json){
                lst=parseJson(json);
-               if (confirm(tradImportListSpotConfirm.replace("%d", lst.length))){
+               if (bForce || confirm(tradImportListSpotConfirm.replace("%d", lst.length))){
                   for (iSpot=0;iSpot<lstSpot.length; iSpot++)
                     map.removeLayer(lstSpot[iSpot].marker);
 
                   lstSpot=lst;
                   localStoreSettings(json);
                   initData();
-                  showList()
+                  if (!bForce)
+                    showList();
                }
                localStorage.lastUrl=strUrl;
                }).fail(function(jq, txtStatus, err) {

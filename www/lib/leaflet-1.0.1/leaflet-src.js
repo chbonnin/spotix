@@ -12935,11 +12935,11 @@ L.Map.include({
 	// @section Geolocation methods
 	_defaultLocateOptions: {
 		timeout: 10000,
-		watch: false
+		watch: false,
 		// setView: false
 		// maxZoom: <Number>
 		// maximumAge: 0
-		// enableHighAccuracy: false
+		 enableHighAccuracy: false
 	},
 
 	// @method locate(options?: Locate options): this
