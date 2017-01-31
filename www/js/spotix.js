@@ -19,8 +19,8 @@ function Spot(num, name, desc, adr, mail, tel, web, fbook, obs, longi, lati, hou
         strRet+=this.adresse+"<br> <a href='#' onclick='copyAddress("+this.numero+")'>"+tradCopierladresse+"</a></td></tr>";
         if (this.email)      strRet+="<tr><th>"+tradEmail+"</th><td colspan='2'>"+this.email+"</td></tr>";
         if (this.telephone)  strRet+="<tr><th>"+tradTelephone+"</th><td colspan='2'>"+this.telephone+"</td></tr>";
-        if (this.site)       strRet+="<tr><th>"+tradSite+"</th><td colspan='2'><a href='"+this.site+"'>"+this.site+"</a></td></tr>";
-        if (this.facebook)   strRet+="<tr><th>"+tradFacebook+"</th><td colspan='2'><a href='"+this.facebook+"'>"+this.facebook+"</a></td></tr>";
+        if (this.site)       strRet+="<tr><th>"+tradSite+"</th><td colspan='2'><a onclick='window.open(\""+this.site+"\",\"_system\")'>"+this.site+"</a></td></tr>";
+        if (this.facebook)   strRet+="<tr><th>"+tradFacebook+"</th><td colspan='2'><a onclick='window.open(\""+this.facebook+"\",\"_system\")'>"+this.facebook+"</a></td></tr>";
         if (this.horaire)    strRet+="<tr><th>"+tradHoraire+"</th><td colspan='2'>"+this.horaire.replace(/,/g,"<br>");
         if (this.observation)strRet+="<tr><th>"+tradDefi+"</th><td colspan='2'>"+this.observation+"</td></tr>";
         if (this.categorie)  strRet+="<tr><th>"+tradCategorie+"</th><td colspan='2'>"+this.categorie+"</td></tr>";
@@ -222,7 +222,9 @@ function appSettings(){
     strRet += "<div>"+tradMajListeLieux+"<div class='ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset'><input type='text' id='idUrl' placeholder='URL' value='";
     if (localStorage.lastUrl) strRet+= localStorage.lastUrl;
     strRet += "'></div><a href='#' class='ui-btn' onclick='updateFromUrl($(\"#idUrl\").val(), false)'>"+tradMettreAJour+"</a>";
-    if (localStorage.datLastUpdate) strRet+= "<div>("+tradDateDerniereMaj+localStorage.datLastUpdate+")</div>";
+    if (localStorage.datLastUpdate && localStorage.datLastUpdate!="undefined") 
+	strRet+= "<div>("+tradDateDerniereMaj+localStorage.datLastUpdate+")</div>";
+
     strRet +="</div>";
     strRet +="<br>"+tradVersion+strVersion;
     strRet +="<br>"+tradLangue+": <select onchange='localize($(this).val());showSettings();'>";
@@ -315,10 +317,12 @@ function showFormNewSpot(lat, lng, num){
     $("#idList").html(htmlFormNewSpot(lat, lng, num));
     if (num>=0) setSpotFields(num);
     $("#idList").show();
-//    $("#idShowMap").removeClass("ui-btn-active");
-//    $("#idShowList").addClass("ui-btn-active");
-//    $("#idFiltre").removeClass("ui-btn-active");
-//    $("#idSettings").removeClass("ui-btn-active");
+}
+//Affichage du contenu d'une URL avec la barre de boutons
+function showInFrame(strUrl){
+    $("#map").hide();
+    $("#idList").html("<div class='ui-content'><iframe src='"+strUrl+"'>Frame error</iframe></div>");
+    $("#idList").show();
 }
 //Bascule vers la liste des catégories
 function showCat(){

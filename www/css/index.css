@@ -137,6 +137,13 @@ p.grayed {
 .FiltreCercle:after { background:  url("../img/icon/button-filter-circled.png") 50% 50% no-repeat;  background-size: 28px 28px; }
 td a {    word-break: break-all;}
 
+iframe {
+    display: block;       /* iframes are inline by default */
+    border: none;         /* Reset default border */
+    width: 100%;
+    height: 75vh;
+}
+
 /*#idFilter:after { background:  url("img/icon/beermug.png") 50% 50% no-repeat;  background-size: 22px 27px; }*/
 
 /*.nav-glyphish .ui-btn { padding-top: 40px !important; }*/
