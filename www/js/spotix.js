@@ -480,7 +480,7 @@ function importListSpots(bText){
 //Après confirmation, remplace la liste des spots par celle téléchargée depuis une url donnée
 function updateFromUrl(strUrl, bForce){
     strUrl=encodeURI(strUrl);
-    if (!strUrl.toLowerCase().startsWith("http"))
+    if (strUrl.toLowerCase().indexOf("http")!==0)
         strUrl = "http://"+strUrl;
     
     try{

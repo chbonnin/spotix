@@ -75,7 +75,7 @@ function initList(bAsk){
 //Copie la liste des spots au format texte dans le presse-papier
 function copyList(){
     try{
-        if ($("#idImport").html().startsWith("<pre>"))
+        if ($("#idImport").html().indexOf("<pre>")===0)
             $("#idImport").html("<pre>"+csvLstSpot()+"</pre>");
         else{
             cordova.plugins.clipboard.copy(stringLstSpot());

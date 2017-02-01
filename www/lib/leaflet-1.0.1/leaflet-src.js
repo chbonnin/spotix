@@ -12938,8 +12938,8 @@ L.Map.include({
 		watch: false,
 		// setView: false
 		// maxZoom: <Number>
-		// maximumAge: 0
-		 enableHighAccuracy: false
+		 maximumAge: 30000,
+		 enableHighAccuracy: true
 	},
 
 	// @method locate(options?: Locate options): this

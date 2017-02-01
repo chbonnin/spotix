@@ -1,7 +1,7 @@
 //Format de la représentation texte de la liste des spots : 
 //une ligne par champ, les lignes isolées sont les catégories, les lignes vides séparent les spots
 //Les 3 premiers champs sont obligatoirement dans l'ordre : nom, description, adresse
-var strBuild="48";
+var strBuild="52";
 var strVersion="0.5."+strBuild;
 
 var lstCat=[

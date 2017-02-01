@@ -142,16 +142,7 @@
             }
             spotNewMarker=L.marker(e.latlng,{icon:lstCat[0].icon}).bindPopup(htmlNewSpot(e.latlng)).addTo(map);
             spotNewMarker.openPopup();
-        } else {
-            navigator.geolocation.getCurrentPosition(
-                                                     function(position) {
-                                                     alert(position.coords.latitude + ',' + position.coords.longitude);
-                                                     },
-                                                     function(error) {
-                                                     alert('Error getting location: '+error.message);
-                                                     }, {timeout:5000, maximumAge:60000, enableHighAccuracy: true});
-
-        }
+        } 
     }
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);
