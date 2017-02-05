@@ -17,10 +17,10 @@ function Spot(num, name, desc, adr, mail, tel, web, fbook, obs, longi, lati, hou
         var strRet= "<b><u>"+this.nom+"</u></b><table><tr><th>"+tradDescription+"</th><td colspan='2'>";
         strRet+=this.description+"</td></tr><tr><th>"+tradAdresse+"</th><td colspan='2'>"
         strRet+=this.adresse+"<br> <a href='#' onclick='copyAddress("+this.numero+")'>"+tradCopierladresse+"</a></td></tr>";
-        if (this.email)      strRet+="<tr><th>"+tradEmail+"</th><td colspan='2'>"+this.email+"</td></tr>";
+        if (this.email)      strRet+="<tr><th>"+tradEmail+"</th><td colspan='2' class='break'>"+this.email+"</td></tr>";
         if (this.telephone)  strRet+="<tr><th>"+tradTelephone+"</th><td colspan='2'>"+this.telephone+"</td></tr>";
-        if (this.site)       strRet+="<tr><th>"+tradSite+"</th><td colspan='2'><a onclick='window.open(\""+this.site+"\",\"_system\")'>"+this.site+"</a></td></tr>";
-        if (this.facebook)   strRet+="<tr><th>"+tradFacebook+"</th><td colspan='2'><a onclick='window.open(\""+this.facebook+"\",\"_system\")'>"+this.facebook+"</a></td></tr>";
+        if (this.site)       strRet+="<tr><th>"+tradSite+"</th><td colspan='2'><a class='break' onclick='window.open(\""+this.site+"\",\"_system\")'>"+this.site+"</a></td></tr>";
+        if (this.facebook)   strRet+="<tr><th>"+tradFacebook+"</th><td colspan='2'><a class='break' onclick='window.open(\""+this.facebook+"\",\"_system\")'>"+this.facebook+"</a></td></tr>";
         if (this.horaire)    strRet+="<tr><th>"+tradHoraire+"</th><td colspan='2'>"+this.horaire.replace(/,/g,"<br>");
         if (this.observation)strRet+="<tr><th>"+tradDefi+"</th><td colspan='2'>"+this.observation+"</td></tr>";
         if (this.categorie)  strRet+="<tr><th>"+tradCategorie+"</th><td colspan='2'>"+this.categorie+"</td></tr>";
@@ -37,8 +37,8 @@ function Spot(num, name, desc, adr, mail, tel, web, fbook, obs, longi, lati, hou
     }
     //contenu de la bulle sur la carte
     this.htmlTooltip=function(){
-        var strRet= "<b><u>"+this.nom+"</u></b><table><tr><th>Description</th><td>"+this.description+"</td></tr><tr><th>Adresse</th><td>"+this.adresse+"</td></tr>";
-        strRet+="<tr><th><a href='#' onclick='showDetail("+this.numero+")'>Détail</a></th><td></td></tr>";
+        var strRet= "<table><tr><th colspan='2' align='center'><u>"+this.nom+"</u></th></tr><tr><th>Description</th><td>"+this.description+"</td></tr><tr><th>Adresse</th><td>"+this.adresse+"</td></tr>";
+        strRet+="<tr><th colspan='2' align='center'><a href='#' onclick='showDetail("+this.numero+")'>"+tradDetail+"</a></th><td></td></tr>";
         
         return strRet+"</table>";
     }
@@ -235,7 +235,7 @@ function appSettings(){
         var center=map.getCenter();
         strRet += "Latitude: "+center.lat.toFixed(6)+", Longitude: "+center.lng.toFixed(6)+"<br>";
     } catch (err){}
-//    strRet += "Zoom: "+map.getZoom()+"<br>";
+    strRet += "<a onclick='$(\"#idList\").load(\""+tradCreditFile+"\")'>"+tradCredit+"</a><br>";
     strRet +="</div>";
     return strRet;
 }
@@ -347,6 +347,7 @@ function showMap(lati, longi){
     $("#idShowList").removeClass("ui-btn-active");
     $("#idFiltre").removeClass("ui-btn-active");
     $("#idSettings").removeClass("ui-btn-active");
+    map.invalidateSize(false);//bug du clavier virtuel Android qui dérègle l'objet carte
     if (lati || longi)
         map.setView([lati,longi],15);
 }

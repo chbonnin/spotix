@@ -121,7 +121,7 @@ p.grayed {
 #map {
 	position: absolute;
 
-	top: 50px;
+	top: 20px;/*Pour laisser la place de la barre d'etat*/
 	left: 0;
 	bottom: 0px;
 	right: 0px;
@@ -130,12 +130,12 @@ p.grayed {
 	height: auto;
 }
 #idList{
-    padding-top:30px;
+    padding-top:10px;
 }
 
 .Filtre:after { background:  url("../img/icon/button-filter.png") 50% 50% no-repeat;  background-size: 28px 28px; }
 .FiltreCercle:after { background:  url("../img/icon/button-filter-circled.png") 50% 50% no-repeat;  background-size: 28px 28px; }
-td a {    word-break: break-all;}
+.break {    word-break: break-all;}
 
 iframe {
     display: block;       /* iframes are inline by default */
