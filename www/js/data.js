@@ -6,7 +6,7 @@ var strVersion="0.5."+strBuild;
 
 var lstCat=[
             {"name": "Nouveau spot", "color":"#FF8000","image":"question.png","num":0,"id":28091,"iconUrl": "http://www.lestuck.eu/wp-content/uploads/2015/09/Nouveau.png"},
-            {"name": "Le Stück - Où s'en procurer", "color":"#a7d0ca","image":"stuck.png","num":50,"id":122863,"iconUrl": "http://www.lestuck.eu/wp-content/uploads/2015/09/Stuck.png"},
+            {"name": "Bureau de change", "color":"#a7d0ca","image":"stuck.png","num":50,"id":122863,"iconUrl": "http://www.lestuck.eu/wp-content/uploads/2015/09/Stuck.png"},
             {"name": "Agriculture - producteur","color":"LawnGreen","image":"agriculture.png","num":1,"id": 120535,"iconUrl": "http://www.lestuck.eu/wp-content/uploads/2015/09/Agriculture-producteur.png"},
             {"name": "Alimentation","color":"LawnGreen","image":"alimentation.png","num":2,"id": 120541,"iconUrl": "http://www.lestuck.eu/wp-content/uploads/2015/09/Alimentation.png"},
             {"name": "Artisanat - métier d'art","color":"LightGoldenRodYellow","image":"art.png","num":3,"id": 120542,"iconUrl": "http://www.lestuck.eu/wp-content/uploads/2015/09/Artisanat-métier-dart.png"},

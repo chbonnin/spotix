@@ -307,9 +307,11 @@ function showDetail(iSpot){
 	    $("#map").hide();
 	    $("#idList").html('<div class="ui-content"><ul data-role="listview" data-inset="true" data-divider-theme="a" id="idLstSpot" class="ui-listview ui-listview-inset ui-corner-all ui-shadow"></ul></div>');
 	    $("#idLstSpot").html(spot.htmlDesc());
-	    $("#idList").show();
+        $("#idShowMap").removeClass("ui-btn-active");
+        $("#idShowList").removeClass("ui-btn-active");
+        $("#idList").show();
     } else 
-	showList();
+        showList();
 }
 //Ajout d'un nouveau spot ou modification d'un existant
 function showFormNewSpot(lat, lng, num){

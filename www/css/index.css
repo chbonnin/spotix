@@ -129,9 +129,7 @@ p.grayed {
 	width: auto;
 	height: auto;
 }
-#idList{
-    padding-top:10px;
-}
+/*#idList{    padding-top:10px;} */
 
 .Filtre:after { background:  url("../img/icon/button-filter.png") 50% 50% no-repeat;  background-size: 28px 28px; }
 .FiltreCercle:after { background:  url("../img/icon/button-filter-circled.png") 50% 50% no-repeat;  background-size: 28px 28px; }
