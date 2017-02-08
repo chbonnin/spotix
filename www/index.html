@@ -96,11 +96,9 @@
                                          
         initData();
             
-//        showMap(0,0);
     
 		function onLocationFound(e) {
 			var radius = e.accuracy / 2;
-//			L.marker(e.latlng).addTo(map).bindPopup("You are within " + radius + " meters from this point").openPopup();
             if (currentLocationCircle)
                 map.removeLayer(currentLocationCircle);
 //                currentLocationCircle.removeFrom(map);
@@ -113,7 +111,12 @@
 
 		function onLocationError(e) {
             centerList(lstSpot);
-			alert(e.message);
+            switch(e.code){
+                case 1/*e.PERMISSION_DENIED*/:alert(tradLocRefusee);break;
+                case 2/*e.POSITION_UNAVAILABLE*/:alert(tradLocIndisponible);break;
+                case 3/*e.TIMEOUT*/:alert(tradLocDelai);break;
+                default: alert(e.message+" ("+e.code+")");
+            }
 		}
 
         function gpsLocateNow(){
