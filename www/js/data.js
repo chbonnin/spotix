@@ -1,11 +1,11 @@
 //Format de la représentation texte de la liste des spots : 
 //une ligne par champ, les lignes isolées sont les catégories, les lignes vides séparent les spots
 //Les 3 premiers champs sont obligatoirement dans l'ordre : nom, description, adresse
-var strBuild="66";
+var strBuild="69";
 var strVersion="0.5."+strBuild;
 
 var lstCat=[
-            {"name": "Nouveau spot", "color":"#FF8000","image":"question.png","num":0,"id":28091,"iconUrl": "http://www.lestuck.eu/wp-content/uploads/2015/09/Nouveau.png"},
+            {"name": "Nouveau", "color":"#FF8000","image":"question.png","num":0,"id":28091,"iconUrl": "http://www.lestuck.eu/wp-content/uploads/2015/09/Nouveau.png"},
             {"name": "Bureau de change", "color":"#a7d0ca","image":"stuck.png","num":50,"id":122863,"iconUrl": "http://www.lestuck.eu/wp-content/uploads/2015/09/Stuck.png"},
             {"name": "Agriculture - producteur","color":"LawnGreen","image":"agriculture.png","num":1,"id": 120535,"iconUrl": "http://www.lestuck.eu/wp-content/uploads/2015/09/Agriculture-producteur.png"},
             {"name": "Alimentation","color":"LawnGreen","image":"alimentation.png","num":2,"id": 120541,"iconUrl": "http://www.lestuck.eu/wp-content/uploads/2015/09/Alimentation.png"},

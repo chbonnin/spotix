@@ -19,6 +19,7 @@ function initData(){
         lstSpot=[];
         $.getJSON("stuck.umap", function(json){//données umap
                   lstSpot=parseJson(json);
+		  lstSpot.sort(compareSpot);
 		  localStoreSettings(json);
                   initMarkers();
               });
@@ -54,8 +55,9 @@ function initMarkers(){
         var iCat=mapCat[lstSpot[iSpot].categorie];
 	
         if (iCat===undefined){
-            alert("Catégorie inconnue : " + lstSpot[iSpot].categorie);
-            break;
+            if (localStorage.modifSpot) alert(tradCatInconnue + lstSpot[iSpot].categorie);
+            iCat=0;
+	    lstSpot[iSpot].categorie=lstCat[iCat].name;
         }
         lstCat[iCat].exist=true;
         lstSpot[iSpot].marker=L.marker([lstSpot[iSpot].latitude, lstSpot[iSpot].longitude],
@@ -195,12 +197,17 @@ function calcMaxZoom(latLng){
         return 16;
 }
 
-//Comparaison de deux spots pour les classer par catégorie puis par nom
+//Comparaison de deux spots pour les classer par catégorie puis par nom. La catégorie Bureau de change (numéro 1) doit être en premier.
 function compareSpot(un, autre){
-    if (un.categorie.localeCompare(autre.categorie) != 0)
-        return un.categorie.localeCompare(autre.categorie);
-    else if (un.numero == autre.numero)
-        return Math.sign(un.numero - autre.numero);
+    if (un.categorie.localeCompare(autre.categorie) != 0){
+	if (lstCat.length>1 && un.categorie===lstCat[1].name)
+		return -1;
+	else if (lstCat.length>1 && autre.categorie===lstCat[1].name)
+		return 1;
+	else
+		return un.categorie.localeCompare(autre.categorie);
+    } else if (un.numero != autre.numero)
+        return (un.numero - autre.numero);
     else
         return 0;
 }

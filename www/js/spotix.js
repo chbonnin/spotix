@@ -497,6 +497,7 @@ function updateFromUrl(strUrl, bForce){
                     map.removeLayer(lstSpot[iSpot].marker);
 
                   lstSpot=lst;
+		  lstSpot.sort(compareSpot);
                   localStoreSettings(json);
                   initData();
                   if (!bForce)
