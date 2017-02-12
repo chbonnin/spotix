@@ -125,8 +125,9 @@ function saveSpot(numSpot){
     spot.observation= $("#idObs").val();
     spot.horaire=$("#idHours").val();
     spot.categorie=$("#idCat").val();
-    map.removeLayer(spot.marker);
-    spot.marker=L.marker([spot.latitude, spot.longitude],{icon:lstCat[mapCat[spot.categorie]].icon}).bindPopup(spot.htmlTooltip()).addTo(map);
+    groupMap.removeLayer(spot.marker);
+    spot.marker=L.marker([spot.latitude, spot.longitude],{icon:lstCat[mapCat[spot.categorie]].icon}).bindPopup(spot.htmlTooltip());
+    groupMap.addLayer(spot.marker);
     localStorage.storedLstSpot=stringLstSpot();
     showMapOrList();
 }
@@ -142,7 +143,8 @@ function createSpot(){
             lstSpot.push( spotNew);
             removeNewSpot();
             var iCat=mapCat[spotNew.categorie];
-            spotNew.marker=L.marker([spotNew.latitude, spotNew.longitude],{icon:lstCat[iCat].icon}).bindPopup(spotNew.htmlTooltip()).addTo(map);
+            spotNew.marker=L.marker([spotNew.latitude, spotNew.longitude],{icon:lstCat[iCat].icon}).bindPopup(spotNew.htmlTooltip());
+	    groupMap.addLayer(spotNew.marker);
             localStorage.storedLstSpot=stringLstSpot();
             showMap();
         }
@@ -219,25 +221,39 @@ function appSettings(){
 	    strRet += "<div><a href='#' class='ui-btn' onclick='initList(true)'>"+tradResetListSpot+"</a></div>";
 	    strRet += "<div id='idImport'><a href='#' class='ui-btn' onclick='importListParse()'>"+tradImportListSpot+"</a></div>";
     }
-    strRet += "<div>"+tradMajListeLieux+"<div class='ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset'><input type='text' id='idUrl' placeholder='URL' value='";
-    if (localStorage.lastUrl) strRet+= localStorage.lastUrl;
+    strRet += "<div>"+tradMajListeLieux+"<div class='ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset'><input type='text' id='idUrl' placeholder='' value='";
+    //if (localStorage.lastUrl) strRet+= localStorage.lastUrl;
     strRet += "'></div><a href='#' class='ui-btn' onclick='updateFromUrl($(\"#idUrl\").val(), false)'>"+tradMettreAJour+"</a>";
     if (localStorage.datLastUpdate && localStorage.datLastUpdate!="undefined") 
 	strRet+= "<div>("+tradDateDerniereMaj+localStorage.datLastUpdate+")</div>";
 
     strRet +="</div>";
     strRet +="<br>"+tradVersion+strVersion;
-    strRet +="<br>"+tradLangue+": <select onchange='localize($(this).val());showSettings();'>";
+    strRet +="<br>"+tradLangue+": <select onchange='localize($(this).val(), 1);showSettings();'>";
     strRet += "<option value='en' "+(language.slice(0,2)=='en'?"selected":"")+">English</option>";
     strRet += "<option value='fr' "+(language.slice(0,2)=='fr'?"selected":"")+">Français</option>";
     strRet += "</select><br/>";
+//    strRet += tradTailleIcones+"<span id='sliderValue'> "+coefSize+"</span><div id='idSliderSize'></div>";
+    strRet += "<label for='idSliderSize'>"+tradTailleIcones+"<span id='sliderValue'> "+coefSize+"</span></label>";
+    strRet += "<input type='range' name='idSliderSize' id='idSliderSize' value='"+coefSize+"' min='0.1' max='1.5' step='0.1' onchange='sliderChangeIconSize(this.value)'/>";
+
     try{
         var center=map.getCenter();
         strRet += "Latitude: "+center.lat.toFixed(6)+", Longitude: "+center.lng.toFixed(6)+"<br>";
     } catch (err){}
-    strRet += "<a onclick='$(\"#idList\").load(\""+tradCreditFile+"\")'>"+tradCredit+"</a><br>";
+    strRet += "<br><a onclick='$(\"#idList\").load(\""+tradCreditFile+"\")'>"+tradCredit+"</a><br>";
     strRet +="</div>";
     return strRet;
+}
+//Evénement de déplacement du curseur pour la taille des marqueurs sur la cartes
+function sliderChangeIconSize(value){
+	  $("#sliderValue").text(value);
+	  localStorage.coefSize=value;
+	  initList(false); 
+}
+//Configuration des controles de la page des réglages
+function setSettingsControls(){
+    $("#idSliderSize").slider();
 }
 //cochage / décochage de toutes les catégories
 function checkAllCat(){
@@ -279,10 +295,10 @@ function showOrHideMarkers(){
         if (iCat>=0 && lstSpot[iSpot].marker){
             if (lstCat[iCat].exclu && lstSpot[iSpot].marker.options.opacity>0){
                 lstSpot[iSpot].marker.setOpacity(0);
-                map.removeLayer(lstSpot[iSpot].marker);
+                groupMap.removeLayer(lstSpot[iSpot].marker);
             } else if (!lstCat[iCat].exclu && lstSpot[iSpot].marker.options.opacity==0){
                 lstSpot[iSpot].marker.setOpacity(1.0);
-                lstSpot[iSpot].marker.addTo(map);
+                groupMap.addLayer(lstSpot[iSpot].marker);
             }
         }
     }
@@ -358,6 +374,7 @@ function showSettings(){
     $("#idList").html(appSettings());
     $("#map").hide();
     $("#idList").show();
+    setSettingsControls();
     $("#idShowMap").removeClass("ui-btn-active");
     $("#idShowList").removeClass("ui-btn-active");
     $("#idFiltre").removeClass("ui-btn-active");
@@ -425,16 +442,18 @@ function setMapBounds(latlng){
         map.setView(latlng,16);
 }
 // traduit les pages dans la langue sélectionnée
-function localize(lang){
+function localize(lang, bStore){
     $.localise("js/trad", {language: lang});
     language=lang;
+    if (bStore)
+	localStorage.language=language; 
 }
 // Suppression d'un spot de la liste
 function deleteSpot(numSpot){
     if (confirm(tradDeleteSpotConfirm))
         for (iSpot=0;iSpot<lstSpot.length; iSpot++)    {
             if (lstSpot[iSpot].numero==numSpot){
-                map.removeLayer(lstSpot[iSpot].marker);
+                groupMap.removeLayer(lstSpot[iSpot].marker);
                 lstSpot.splice(iSpot,1);
                 localStorage.storedLstSpot=stringLstSpot();
                 showMapOrList();
@@ -444,7 +463,7 @@ function deleteSpot(numSpot){
 }
 //Annulation de l'ajout du nouveau spot
 function removeNewSpot(){
-    map.removeLayer(spotNewMarker);
+    groupMap.removeLayer(spotNewMarker);
 }
 //Retourne à l'écran carte ou liste en fonction du bouton sélectionné
 function showMapOrList(){
@@ -471,9 +490,8 @@ function importListParse(){
 function importListSpots(bText){
     var lst = bText ? parseData($('#idPreLst').text()) : parseJson( $.parseJSON($('#idPreLst').text()) );
     if (confirm(tradImportListSpotConfirm.replace("%d", lst.length))){
-        for (iSpot=0;iSpot<lstSpot.length; iSpot++)
-            map.removeLayer(lstSpot[iSpot].marker);
-
+        //for (iSpot=0;iSpot<lstSpot.length; iSpot++) map.removeLayer(lstSpot[iSpot].marker);
+	groupMap.clearLayers();
         lstSpot=lst;
         localStorage.storedLstSpot=stringLstSpot();
         initData();
@@ -482,7 +500,11 @@ function importListSpots(bText){
 }
 //Après confirmation, remplace la liste des spots par celle téléchargée depuis une url donnée
 function updateFromUrl(strUrl, bForce){
-    strUrl=encodeURI(strUrl);
+    if (strUrl) 
+	strUrl=encodeURI(strUrl);
+    else 
+	strUrl = localStorage.lastUrl;
+
     if (strUrl.toLowerCase().indexOf("http")!==0)
         strUrl = "http://"+strUrl;
     
@@ -493,8 +515,8 @@ function updateFromUrl(strUrl, bForce){
         $.getJSON(strUrl, function(json){
                lst=parseJson(json);
                if (bForce || confirm(tradImportListSpotConfirm.replace("%d", lst.length))){
-                  for (iSpot=0;iSpot<lstSpot.length; iSpot++)
-                    map.removeLayer(lstSpot[iSpot].marker);
+                  //for (iSpot=0;iSpot<lstSpot.length; iSpot++) map.removeLayer(lstSpot[iSpot].marker);
+	          groupMap.clearLayers();
 
                   lstSpot=lst;
 		  lstSpot.sort(compareSpot);

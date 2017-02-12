@@ -141,6 +141,7 @@ iframe {
     width: 100%;
     height: 75vh;
 }
+input.ui-slider-input { display: none!important; }
 
 /*#idFilter:after { background:  url("img/icon/beermug.png") 50% 50% no-repeat;  background-size: 22px 27px; }*/
 

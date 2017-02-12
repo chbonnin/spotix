@@ -30,6 +30,7 @@
         <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css" />
         <script src="lib/jquery.min.js"></script>
         <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+
         <script src="lib/jquery.localisation.min.js"></script>
         <script src="js/trad.js"></script>
         <title>Spotix</title>
@@ -55,13 +56,17 @@
 
 	<script>
         var map = L.map('map');
+	var groupMap=L.layerGroup();
         var currentLocationCircle, spotNewMarker;
         var gpsLocateClicked=false;
-        var language;
+        var language=$.localise.defaultLanguage;
         var lstSpot;
         var numSpotMax;
         
-        localize($.localise.defaultLanguage);
+	if (localStorage.language)
+		language=localStorage.language;
+
+        localize(language);
         $(document).ready(function(){
                           $("#idList").hide();
                           $("#idShowList").click(function(){showList();});
