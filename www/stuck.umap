@@ -41,7 +41,7 @@
     "scaleControl": true,
     "scrollWheelZoom": true,
     "zoom": 10,
-    "updateDate": "11/01/2017"
+    "updateDate": "08/02/2017"
   },
   "geometry": {
     "type": "Point",
@@ -91,7 +91,7 @@
           "type": "Feature",
           "properties": {
             "name": "Brasserie La Mercière",
-            "Description": "La Mercière, c'est tout d'abord une histoire d'amateur de bière artisanale, de partage et d'amitié.  ",
+            "Description": "La Mercière, c&#39;est tout d&#39;abord une histoire d&#39;amateur de bière artisanale, de partage et d&#39;amitié.  ",
             "Adresse": "15 Rue Mercière 67207 Niederhausbergen",
             "Email": "brasserie@la-merciere.fr",
             "Téléphone": "06 76 51 77 87",
@@ -116,7 +116,7 @@
             "Description": "Production de bières artisanales et biologiques.",
             "Adresse": "88 rue principale 67310 SCHARRACHBERGHEIM IRMSTETT",
             "Email": "brasserielanarcose@outlook.fr",
-            "Téléphone": "783937053",
+            "Téléphone": "0783937053",
             "Page facebook": "https://www.facebook.com/Brasserie-La-Narcose-434454743428704/?fref=ts",
             "Défi": "Concevoir un plan de rénovation des futurs locaux de manière écologique"
           },
@@ -155,7 +155,7 @@
           "type": "Feature",
           "properties": {
             "name": "Domaine Heywang",
-            "Description": "Vins d'Alsace en Agriculture Biologique Klevener de Heiligenstein, Grand Cru Kirchberg, cépages traditionnels  ",
+            "Description": "Vins d&#39;Alsace en Agriculture Biologique Klevener de Heiligenstein, Grand Cru Kirchberg, cépages traditionnels  ",
             "Adresse": "7 rue principale 67140 Heiligenstein",
             "Email": "contact@heywang-vins.fr",
             "Téléphone": "03 88 08 91 41",
@@ -197,8 +197,28 @@
         {
           "type": "Feature",
           "properties": {
+            "name": "Ferme Kikiriki",
+            "Description": "Paysan boulanger : Pain au levain cuit au feu de bois, farine, fruits de saison, jus de fruits (AB) Vente à la ferme les mardis et vendredis, de 17h à19h",
+            "Adresse": "48 rue principale 67210 Goxwiller",
+            "Email": "frantzwelt@gmail.com",
+            "Téléphone": "+33(0)7 87 54 03 20",
+            "Défi": "Améliorer l?équilibre vie professionnel/vie privée : partir deux semaines en vacances"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.484881299999984,
+              48.4327096
+	    ]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
             "name": "Ferme Lindgrube",
-            "Description": "Cette ferme, conduite en agriculture biologique, élève un troupeau de vaches de race vosgienne. Vous y trouverez lait, yaourts nature ou aromatisés aux huiles essentielles, crèmes desserts, fromage blanc à l'ancienne, bargkas, munster...",
+            "Description": "Cette ferme, conduite en agriculture biologique, élève un troupeau de vaches de race vosgienne. Vous y trouverez lait, yaourts nature ou aromatisés aux huiles essentielles, crèmes desserts, fromage blanc à l&rsquo;ancienne, bargkas, munster...",
             "Adresse": "Ferme Lindgrube 67220 Breitenbach",
             "Email": "laulergerard@hotmail.fr",
             "Téléphone": "03.88.57.29.41",
@@ -208,8 +228,8 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              7.288901,
-              48.373684
+              7.307646,
+              48.371531
 	    ]
           }
         }
@@ -284,7 +304,7 @@
           "type": "Feature",
           "properties": {
             "name": "Herrmann - Les Jardins Gourmands",
-            "Description": "Fruits et légumes issus de l'agriculture biologique, locale et raisonnable !",
+            "Description": "Fruits et légumes issus de l&#39;agriculture biologique, locale et raisonnable !",
             "Adresse": "9, rue des vergers 67270 Duntzenheim",
             "Email": "contact@fruits-herrmann.fr",
             "Téléphone": "03 88 70 57 10",
@@ -306,7 +326,7 @@
           "type": "Feature",
           "properties": {
             "name": "Herrmann- à Hanaufruits",
-            "Description": "Fruits et légumes issus de l'agriculture biologique, locale et raisonnable !",
+            "Description": "Fruits et légumes issus de l&#39;agriculture biologique, locale et raisonnable !",
             "Adresse": "rue de Riedheim 67330 BOUXWILLER",
             "Email": "contact@fruits-herrmann.fr",
             "Téléphone": "03 88 70 57 10",
@@ -349,7 +369,7 @@
           "type": "Feature",
           "properties": {
             "name": "Jean-Philippe GOOS",
-            "Description": "Culture d'arbres fruitiers : fruits à pépins (pommes, poires) ou à noyau (cerises, prunes, mirabelles, quetsches...) en n'ayant recours  qu'à des opérations manuelles et à des méthodes d'agriculture raisonnée.",
+            "Description": "Culture d&#39;arbres fruitiers : fruits à pépins (pommes, poires) ou à noyau (cerises, prunes, mirabelles, quetsches...) en n&#39;ayant recours  qu&#39;à des opérations manuelles et à des méthodes d&#39;agriculture raisonnée.",
             "Adresse": "7 rue Pasteur 67113 BLAESHEIM",
             "Téléphone": "03 88 68 88 61",
             "Défi": "Inciter les clients à venir avec leur propre panier / arrêter les sachets plastiques OU évoluer vers bout/bocal consignés, récupérés"
@@ -359,26 +379,6 @@
             "coordinates": [
               7.604402,
               48.50383
-	    ]
-          }
-        }
-        ,
-
-        {
-          "type": "Feature",
-          "properties": {
-            "name": "Kikiriki",
-            "Description": "Paysan boulanger : Pain au levain cuit au feu de bois, farine, fruits de saison, jus de fruits (AB) Vente à la ferme les mardis et vendredis, de 17h à19h",
-            "Adresse": "48 rue principale 67210 Goxwiller",
-            "Email": "frantzwelt@gmail.com",
-            "Téléphone": "+33(0)7 87 54 03 20",
-            "Défi": "Améliorer l?équilibre vie professionnel/vie privée : partir deux semaines en vacances"
-          },
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              7.484881299999984,
-              48.4327096
 	    ]
           }
         }
@@ -530,7 +530,7 @@
           "type": "Feature",
           "properties": {
             "name": "Biocoop - Le Quai des Halles",
-            "Description": "Magasin de produits issus de l'agriculture biologique",
+            "Description": "Magasin de produits issus de l&#39;agriculture biologique",
             "Adresse": "6 rue de Sébastopol 67000 Strasbourg",
             "Email": "lequaideshalles@orange.fr",
             "Téléphone": "03 88 36 52 68",
@@ -552,7 +552,7 @@
           "type": "Feature",
           "properties": {
             "name": "Biocoop G'Sundheit",
-            "Description": "Épicerie, fruits et légumes, rayon frais, pain, écoproduits d'entretien, produits cosmétiques et de bien-être, diététique...Regroupé en société coopérative, encadré par une charte éthique. ",
+            "Description": "Épicerie, fruits et légumes, rayon frais, pain, écoproduits d&#39;entretien, produits cosmétiques et de bien-être, diététique...Regroupé en société coopérative, encadré par une charte éthique. ",
             "Adresse": "19 rue du Sel 67600 Sélestat",
             "Email": "biocoopgsundheit@orange.fr",
             "Téléphone": "03 88 82 10 97",
@@ -636,7 +636,7 @@
           "type": "Feature",
           "properties": {
             "name": "Coopérative Essenciel",
-            "Description": "La SCIC Essenciel cultive et vend de la spiruline solidaire ou locale en partenariat avec deux associations humanitaires qui oeuvrent pour la santé & la construction d'établissement scolaire au Burkina Faso. LA SCIC a établi une ferme locale à Hurtigheim.",
+            "Description": "La SCIC Essenciel cultive et vend de la spiruline solidaire ou locale en partenariat avec deux associations humanitaires qui oeuvrent pour la santé & la construction d&#39;établissement scolaire au Burkina Faso. LA SCIC a établi une ferme locale à Hurtigheim.",
             "Adresse": "2 rue Otto Back 67200 Strasbourg",
             "Email": "alsacespirulinesolidaire@gmail.com",
             "Téléphone": "09 54 19 68 49",
@@ -657,7 +657,7 @@
           "type": "Feature",
           "properties": {
             "name": "Day by Day",
-            "Description": "Epicerie vendant des produits alimentaires, d'hygiène et d'entretien en vrac.  ",
+            "Description": "Epicerie vendant des produits alimentaires, d&#39;hygiène et d&#39;entretien en vrac.  ",
             "Adresse": "90 route du Polygone 67100 Strasbourg",
             "Téléphone": "03 88 41 63 35",
             "Site web": "http://daybyday-shop.com/vrac",
@@ -696,29 +696,8 @@
         {
           "type": "Feature",
           "properties": {
-            "name": "Fournil KRISTOF",
-            "Description": "Le Fournil Kristof propose des produits artisanaux de qualité. On les retrouve dans la boulangerie, sur les marchés, et chez certains restaurateurs.   ",
-            "Adresse": "13 rue Desaix, ZA Mundolsheim 67450 Mundolsheim",
-            "Email": "fournil.kristof@gmail.com",
-            "Site web": "http://www.fournil-kristof.com",
-            "Page facebook": "https://www.facebook.com/profile.php?id=100005456115812",
-            "Défi": "Afin de valoriser les déchets organiques et de réduire le bilan carbone sur le transport des ?ufs, il s'agit de créer un poulailler à proximité de l'activité"
-          },
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              7.717196,
-              48.632024
-	    ]
-          }
-        }
-        ,
-
-        {
-          "type": "Feature",
-          "properties": {
             "name": "HagenBio",
-            "Description": "Magasin d'alimentation favorisant les circuits courts et le bio. ",
+            "Description": "Magasin d&#39;alimentation favorisant les circuits courts et le bio. ",
             "Adresse": "103 route de Bitche 67500 Haguenau",
             "Téléphone": "03 88 80 00 00",
             "Site web": "http://www.serpentvert.com/haguenau",
@@ -760,7 +739,7 @@
           "type": "Feature",
           "properties": {
             "name": "La Maison Vitale Dorlisheim",
-            "Description": "Supermarché Bio à Dorlisheim. 420m² dédiés à l'univers bio sous l'enseigne La Maison Vitale.",
+            "Description": "Supermarché Bio à Dorlisheim. 420m² dédiés à l&#39;univers bio sous l&#39;enseigne La Maison Vitale.",
             "Adresse": "31 Rue de la Division Leclerc 67120 Dorlisheim",
             "Téléphone": "03 90 41 41 00",
             "Site web": "http://www.jevis-bio.com/bio_alsace_dorlisheim.html",
@@ -839,8 +818,29 @@
         {
           "type": "Feature",
           "properties": {
+            "name": "Les Petits Bocaux",
+            "Description": "Epicerie Vrac Bio et Zéro déchet (alimentaire, beauté, entretien)",
+            "Adresse": "126 rue du Général Gouraud 67210 OBERNAI",
+            "Email": "lespetitsbocaux@gmail.com",
+            "Téléphone": "+33(0)9 86 75 55 00",
+            "Page facebook": "facebook.com/lespetitsbocaux",
+            "Défi": "mise en place de compostage"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.479598,
+              48.462196
+	    ]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
             "name": "Les jardins de Gaïa",
-            "Description": "Import, transformation, conditionnement, distribution de thés et tisanes issus de l'agriculture biologique et du commerce équitable.",
+            "Description": "Import, transformation, conditionnement, distribution de thés et tisanes issus de l&#39;agriculture biologique et du commerce équitable.",
             "Adresse": "6 rue de l'écluse 67820 Wittisheim",
             "Email": "courriervpc@jardinsdegaia.com",
             "Téléphone": "03 88 85 88 30",
@@ -883,7 +883,7 @@
           "type": "Feature",
           "properties": {
             "name": "Marché frais - Stéphane Biot",
-            "Description": "Vos courses alimentaires dans un marché couvert qui s'approvisionne en direct chez ses fournisseurs et propose des solutions repas pour actifs pressés.",
+            "Description": "Vos courses alimentaires dans un marché couvert qui s&#39;approvisionne en direct chez ses fournisseurs et propose des solutions repas pour actifs pressés.",
             "Adresse": "51 rue de Strasbourg 67206 Mittelhausbergen",
             "Email": "contact@sbiot.fr",
             "Téléphone": "03 88 77 50 00",
@@ -986,7 +986,7 @@
           "type": "Feature",
           "properties": {
             "name": "Banos Nathalie - Créatrice d'impression",
-            "Description": "Création d'impressions destinées à la décoration d'intérieur (tentures, coussins, chemins de table, vide-poches&hellip; etc) édités en petites séries imprimées sur lin (motifs également déclinés en papeterie) et pièces uniques (lin et feutre).",
+            "Description": "Création d&#39;impressions destinées à la décoration d&rsquo;intérieur (tentures, coussins, chemins de table, vide-poches&hellip; etc) édités en petites séries imprimées sur lin (motifs également déclinés en papeterie) et pièces uniques (lin et feutre).",
             "Adresse": "53A rue de Molsheim 67280 Urmatt",
             "Email": "bleulichen@gmail.com",
             "Téléphone": "03 88 48 01 75",
@@ -1008,7 +1008,7 @@
           "type": "Feature",
           "properties": {
             "name": "Chloé K.* - Photographe",
-            "Description": "Croqueuse de lumières, photographe d'art qui travaille avec les conditions naturelles.",
+            "Description": "Croqueuse de lumières, photographe d&#39;art qui travaille avec les conditions naturelles.",
             "Adresse": "36, rue du soleil 67800 hoenheim",
             "Email": "chloeka@yahoo.fr",
             "Téléphone": "06 61 58 61 69",
@@ -1093,7 +1093,7 @@
           "type": "Feature",
           "properties": {
             "name": "Filétoile",
-            "Description": "Tissage à la main depuis 1987, plus de 350 variétés de minéraux sélectionnés, à l'état brut, polis ou taillés, boutons et broches en matières naturelles, disponibles au détail, fils et de tissus au mètre Coupons et chutes pour patchwork.",
+            "Description": "Tissage à la main depuis 1987, plus de 350 variétés de minéraux sélectionnés, à l&rsquo;état brut, polis ou taillés, boutons et broches en matières naturelles, disponibles au détail, fils et de tissus au mètre Coupons et chutes pour patchwork.",
             "Adresse": "19 rue de la Wantzenau 67116 Reichstett",
             "Email": "filetoile@gmail.com",
             "Téléphone": "03 88 25 06 86",
@@ -1114,7 +1114,7 @@
           "type": "Feature",
           "properties": {
             "name": "Fleurs de Pays",
-            "Description": "Le stand Fleurs de Pays vous accueille au coeur de Strasbourg à deux pas de la place kleber sur le marché aux fleurs.",
+            "Description": "Le stand Fleurs de Pays vous accueille au c&oelig;ur de Strasbourg à deux pas de la place kleber sur le marché aux fleurs.",
             "Adresse": "18 Rue des Grandes Arcades 67000 Strasbourg",
             "Email": "info@fleursdepays.com",
             "Téléphone": "06 14 99 41 84",
@@ -1199,7 +1199,7 @@
           "type": "Feature",
           "properties": {
             "name": "Mulata Création",
-            "Description": "Créations originales et uniques de vétements et d'accessoires à partir de matériaux de récup. ",
+            "Description": "Créations originales et uniques de vétements et d&#39;accessoires à partir de matériaux de récup. ",
             "Adresse": "10, rue des foulons 67000 Strasbourg",
             "Email": "mulatacreatex@outlook.fr",
             "Téléphone": "06 62 49 24 25",
@@ -1230,8 +1230,8 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              7.575166099999933,
-              48.4982529
+              7.575116,
+              48.4983
 	    ]
           }
         }
@@ -1297,6 +1297,28 @@
 	    ]
           }
         }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Touch à Fleur par Cathy Ehrhart",
+            "Description": "Artisan fleuriste, felurissez-vous avec élégance.",
+            "Adresse": "112 rue du général gouraud 67210 OBERNAI",
+            "Email": "ehrhart@touchafleurs.fr",
+            "Téléphone": "0388955817",
+            "Site web": "http://www.touchafleurs.fr/",
+            "Page facebook": "https://www.facebook.com/touchafleurs/?fref=ts",
+            "Défi": "Convaincre plusieurs professionnels du réseau BNI de rejoindre le Stück."
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.480300800000009,
+              48.46247940000001
+	    ]
+          }
+        }
 
     ]
    },
@@ -1317,8 +1339,29 @@
         {
           "type": "Feature",
           "properties": {
+            "name": "Association Le Stück",
+            "Description": "L&#39;association Le Stück a pour objet gère la monnaie locale du même nom. Pas une hésitation : rejoignez-nous !",
+            "Adresse": "78 route du Polygone 67100 STRASBOURG",
+            "Email": "contact@lestuck.eu",
+            "Téléphone": "0983569588",
+            "Site web": "http://www.lestuck.eu",
+            "Page facebook": "https://www.facebook.com/lestuckstrasbourg"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.758112399999959,
+              48.56697369999999
+	    ]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
             "name": "Association PAR ENchantement",
-            "Description": "Association familiale de quartier soutenant les initiatives des habitants en s'appuyant sur leur Pouvoir d'agir : Micro-crèche d'insertion, soutien scolaire, soutien à la parentalité, cadre de vie, culture, actions jeunes, insertion socio-professionnelle. ",
+            "Description": "Association familiale de quartier soutenant les initiatives des habitants en s&#39;appuyant sur leur Pouvoir d&#39;agir : Micro-crèche d&#39;insertion, soutien scolaire, soutien à la parentalité, cadre de vie, culture, actions jeunes, insertion socio-professionnelle. ",
             "Adresse": "55 rue de la Charmille 67200 Strasbourg",
             "Email": "contact@associationparenchantement.com",
             "Téléphone": "03 88 12 37 78",
@@ -1340,7 +1383,7 @@
           "type": "Feature",
           "properties": {
             "name": "BiObernai",
-            "Description": "Organisation du salon BiObernai par l'association Alsace Bio et sABa. La prochaine édition du salon de l'agriculture biologique en Alsace aura lieu le 16, 17, et 18 septembre 2016.   ",
+            "Description": "Organisation du salon BiObernai par l&#39;association Alsace Bio et sABa. La prochaine édition du salon de l&#39;agriculture biologique en Alsace aura lieu les 15, 16 et 17 septembre 2017.   ",
             "Adresse": "33 rue Gnl Gouraud 67210 Obernai",
             "Email": "maurice.meyer@alsacebio.com",
             "Site web": "http://www.biobernai.com",
@@ -1349,8 +1392,8 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              7.48168,
-              48.46226
+              7.48611,
+              48.460307
 	    ]
           }
         }
@@ -1363,7 +1406,7 @@
             "Description": "Centre créatif et artistique proposant des activités pour tous les âges.",
             "Adresse": "4 rue des bâteliers 67000 STRASBOURG",
             "Email": "espace-des-bateliers@orange.fr",
-            "Téléphone": "388370594",
+            "Téléphone": "0388370594",
             "Site web": "http://www.lesbateliers.com/",
             "Page facebook": "https://www.facebook.com/espace.bateliers?fref=ts",
             "Défi": "Réduire la quantité d'ordures ménagères"
@@ -1382,7 +1425,7 @@
           "type": "Feature",
           "properties": {
             "name": "La Maison du Compost",
-            "Description": "L'association « la Maison du Compost  » a pour objet de promouvoir, de sensibiliser et/ou d'accompagner les citoyens désireux de pratiquer du compostage individuellement ou collectivement",
+            "Description": "L&rsquo;association « la Maison du Compost  » a pour objet de promouvoir, de sensibiliser et/ou d&rsquo;accompagner les citoyens désireux de pratiquer du compostage individuellement ou collectivement",
             "Adresse": "4 rue de Dachstein 67200 Strasbourg",
             "Email": "lamaisonducompost@gmail.com",
             "Site web": "http://lamaisonducompost.fr/",
@@ -1403,7 +1446,7 @@
           "type": "Feature",
           "properties": {
             "name": "Nature et vie",
-            "Description": "Créée en 1978, l'association Nature et Vie agit en faveur de la protection de la nature et la qualité de notre cadre de vie, essentiellement sur le secteur de Barr et environs.",
+            "Description": "Créée en 1978, l&#39;association Nature et Vie agit en faveur de la protection de la nature et la qualité de notre cadre de vie, essentiellement sur le secteur de Barr et environs.",
             "Adresse": "90 rue de la vallée St Ulrich 67140 BARR",
             "Email": "natureetvie@gmail.com",
             "Téléphone": "03 68 05 34 38",
@@ -1423,7 +1466,7 @@
           "type": "Feature",
           "properties": {
             "name": "SPACS",
-            "Description": "Service pour la Promotion de l'ACtion Sociale (SPACS) de l'Université de Strasbourg",
+            "Description": "Service pour la Promotion de l&#39;ACtion Sociale (SPACS) de l&#39;Université de Strasbourg",
             "Adresse": "Université de Strasbourg Service pour la Promotion de l'ACtion Sociale 43 rue Goethe 67000 STRASBOURG",
             "Email": "spacs@unistra.fr",
             "Téléphone": "03 68 85 20 00",
@@ -1458,7 +1501,7 @@
           "type": "Feature",
           "properties": {
             "name": "Amphora",
-            "Description": "Un lieu unique et alternatif qui vise à l'épanouissement de l'être humain dans sa globalité. Boutique, bar à soupe/s/Jus bio, sauna-détente privatif, espace culturel, location de salle.  ",
+            "Description": "Un lieu unique et alternatif qui vise à l&#39;épanouissement de l&#39;être humain dans sa globalité. Boutique, bar à soupe/s/Jus bio, sauna-détente privatif, espace culturel, location de salle.  ",
             "Adresse": "23 rue du faubourg de Pierre 67000 Strasbourg",
             "Email": "contact@amphora-artdevivre.fr",
             "Téléphone": "03 88 59 30 89",
@@ -1524,7 +1567,7 @@
             "Description": "Accompagnement au développement personnel et soins de santé. ",
             "Adresse": "24 rue de lunéville 67100 Neudorf",
             "Email": "chris-velopax@hotmail.com",
-            "Téléphone": "954373981",
+            "Téléphone": "0954373981",
             "Défi": "Réduire son impact environnemental en cultivant ses plantes de soin soi-même, et en réalisant ses déplacements professionnels à vélo"
           },
           "geometry": {
@@ -1552,8 +1595,8 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              7.425583599999982,
-              48.4438087
+              7.470909399999982,
+              48.496381
 	    ]
           }
         }
@@ -1691,7 +1734,7 @@
           "type": "Feature",
           "properties": {
             "name": "Pascal Léval",
-            "Description": "Naturopathie, Bioélectronique de Vincent, Bol d'air Jacquier",
+            "Description": "Naturopathie, Bioélectronique de Vincent, Bol d&#39;air Jacquier",
             "Adresse": "2 rue de la Laine 67160 Wissembourg",
             "Téléphone": "03 88 72 18 20",
             "Site web": "http://www.pascal-leval.fr",
@@ -1749,7 +1792,7 @@
           "type": "Feature",
           "properties": {
             "name": "Association Beudeux",
-            "Description": "Edition de Bandes Dessinées : les deux premiers tomes d'Aimé Noël\" le personnage déjanté de Yan et Julius seront bientôt suivis par d'autres albums et, on l'espère, d'autres auteurs!",
+            "Description": "Edition de Bandes Dessinées : les deux premiers tomes d&#39;Aimé Noël\" le personnage déjanté de Yan et Julius seront bientôt suivis par d&#39;autres albums et, on l&#39;espère, d&#39;autres auteurs!",
             "Adresse": "9 rue des myosotis 67205 oberhausbergen",
             "Site web": "http://www.beudeux.com/",
             "Page facebook": "https://www.facebook.com/beudeux/?fref=ts",
@@ -1891,7 +1934,7 @@
           "type": "Feature",
           "properties": {
             "name": "ARES",
-            "Description": "Association de quartier et centre socio culturel de l'Esplanade à Strasbourg.",
+            "Description": "Association de quartier et centre socio culturel de l&#39;Esplanade à Strasbourg.",
             "Adresse": "10 rue d'Ankara 67000 Strasbourg",
             "Email": "contact@ares-actif.fr",
             "Téléphone": "03 88 61 63 82",
@@ -1913,7 +1956,7 @@
           "type": "Feature",
           "properties": {
             "name": "Marius GRIMAUD",
-            "Description": "Cours particuliers pour tous les âges en informatique, chant, solfège, piano, soutien scolaire jusqu'en terminale, accompagnement dans la conception de modules de formation. Le tout avec une approche explicite, bienveillante, dans l'objectif de vous aider à construire votre autonomie.",
+            "Description": "Cours particuliers pour tous les âges en informatique, chant, solfège, piano, soutien scolaire jusqu&#39;en terminale, accompagnement dans la conception de modules de formation. Le tout avec une approche explicite, bienveillante, dans l&#39;objectif de vous aider à construire votre autonomie.",
             "Adresse": "7 rue de la Rheinmatt 67100 STRASBOURG",
             "Email": "marius.pro@grimaud.me",
             "Téléphone": "09 50 16 77 22",
@@ -2118,7 +2161,7 @@
           "type": "Feature",
           "properties": {
             "name": "Retour aux sources",
-            "Description": "Géobiologie et santé de l'habitat",
+            "Description": "Géobiologie et santé de l&#39;habitat",
             "Adresse": "5, rue Boudhors 67000 Strasbourg",
             "Email": "alain.vadot@orange.fr",
             "Téléphone": "06 14 09 05 09",
@@ -2152,19 +2195,40 @@
         {
           "type": "Feature",
           "properties": {
+            "name": "Gîte Cerise & Coquelicot",
+            "Description": "Meublé de tourisme pour 2 personnes au centre du village",
+            "Adresse": "9 rue de l?église 67680 EPFIG",
+            "Email": "contact@cerisecoquelicot.com",
+            "Téléphone": "+33(0)6 31 74 17 42",
+            "Site web": "http://www.cerisecoquelicot.com/",
+            "Page facebook": "cerise.coquelicot.1"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.464243,
+              48.35940
+	    ]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
             "name": "Gîte Les Cerisiers",
             "Description": "Ferme Bio ( agriculture, viande, vente directe, AMAP). Location de gîtes à Breitenbach",
             "Adresse": "ferme Lindgrube 67220 Breitenbach",
             "Email": "laulergerard@hotmail.fr",
             "Téléphone": "03.88.57.29.41",
             "Site web": "http://www.lindgrube.fr/cerisiers.php",
-            "Défi": "Afin de rééquilibrer vie professionnelle / vie privée, il s'agit de s'organiser 1 semaine de congé avec sa compagne"
+            "Défi": "Tendre vers des autonomies fourragère et énergétique par la construction d'un système de séchage de foin en grange."
           },
           "geometry": {
             "type": "Point",
             "coordinates": [
-              7.288901,
-              48.373684
+              7.307536,
+              48.371594
 	    ]
           }
         }
@@ -2184,8 +2248,8 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              7.288901,
-              48.373684
+              7.307724,
+              48.371494
 	    ]
           }
         }
@@ -2217,7 +2281,7 @@
           "type": "Feature",
           "properties": {
             "name": "Le Moulin",
-            "Description": "Chambres d'hôtes dans un vieux moulin du 18ème siècle dont la rénovation est réalisée avec un souci écologique.",
+            "Description": "Chambres d&#39;hôtes dans un vieux moulin du 18ème siècle dont la rénovation est réalisée avec un souci écologique.",
             "Adresse": "44, route de Reichshoffen 67110 Niederbronn-les-Bains",
             "Email": "marianne.mellon@gmail.com",
             "Téléphone": "03 88 09 00 37",
@@ -2330,8 +2394,29 @@
         {
           "type": "Feature",
           "properties": {
+            "name": "Atelier boutique Cerise & Coquelicot",
+            "Description": "Ateliers créatifs (adultes et enfants), goûters d&rsquo;anniversaire et événements Vente d&rsquo;articles artisanaux de décoration et accessoires de mode",
+            "Adresse": "9 rue de l?église 67680 EPFIG",
+            "Email": "contact@cerisecoquelicot.com",
+            "Téléphone": "06 31 74 17 42",
+            "Site web": "http://www.cerisecoquelicot.com/",
+            "Page facebook": "cerise.coquelicot.1"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.464242,
+              48.35939
+	    ]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
             "name": "Block'Out",
-            "Description": "Salle d'escalade: 800 m² de bloc, restaurant type brasserie, musculation, sauna et hammam, événementiel.",
+            "Description": "Salle d&#39;escalade: 800 m² de bloc, restaurant type brasserie, musculation, sauna et hammam, événementiel.",
             "Adresse": "4 Rue Alexandre Dumas 67200 Strasbourg",
             "Email": "strasbourg@blockout.fr",
             "Téléphone": "03 90 23 06 91",
@@ -2353,7 +2438,7 @@
           "type": "Feature",
           "properties": {
             "name": "Cercle de l'Aviron de Strasbourg",
-            "Description": "Le C.A.S. propose un éventail varié d'activités été comme hiver : aviron découverte, loisir, stages, randonnées, séances de fitness.",
+            "Description": "Le C.A.S. propose un éventail varié d&#39;activités été comme hiver : aviron découverte, loisir, stages, randonnées, séances de fitness.",
             "Adresse": "Ile Weiler / Quai Jean-Pierre Mayno 67000 Strasbourg",
             "Email": "club@cercleavironstrasbourg.eu",
             "Téléphone": "06 58 60 31 75",
@@ -2396,7 +2481,7 @@
           "type": "Feature",
           "properties": {
             "name": "La Villa Meteor",
-            "Description": "Dans un site fabuleux, vivez une expérience unique et ludique autour de la fabrication de la bière et de l'histoire de METEOR.",
+            "Description": "Dans un site fabuleux, vivez une expérience unique et ludique autour de la fabrication de la bière et de l&rsquo;histoire de METEOR.",
             "Adresse": "6 rue du général Lebocq 67270 Hochfelden",
             "Email": "villa@brasserie-meteor.fr",
             "Téléphone": "03 88 02 22 44",
@@ -2418,7 +2503,7 @@
           "type": "Feature",
           "properties": {
             "name": "Professeur de chant Thérèse Berger",
-            "Description": "Mezzo-soprano et professeur de chant, enseigne  dans les écoles de musique de Barr et Entzheim, ainsi qu'en cours privé à son domicile à Boersch.",
+            "Description": "Mezzo-soprano et professeur de chant, enseigne  dans les écoles de musique de Barr et Entzheim, ainsi qu&#39;en cours privé à son domicile à Boersch.",
             "Adresse": "8 rue des Vosges 67530 Boersch",
             "Email": "therese.berger46@gmail.com",
             "Téléphone": "06 30 57 87 92",
@@ -2511,7 +2596,7 @@
           "type": "Feature",
           "properties": {
             "name": "Boutique Oxfam",
-            "Description": "Les Magasins Oxfam vous proposent une autre façon d'acheter livres, CDs, DVD, vêtements, accessoires et objets pour la maison, en alliant plaisir de l'achat à portée de toutes les bourses et action solidaire.",
+            "Description": "Les Magasins Oxfam vous proposent une autre façon d&rsquo;acheter livres, CDs, DVD, vêtements, accessoires et objets pour la maison, en alliant plaisir de l&rsquo;achat à portée de toutes les bourses et action solidaire.",
             "Adresse": "5-7 Rue de la Division Leclerc 67000 STRASBOURG",
             "Email": "laboutiquestrasbourg@oxfamfrance.org",
             "Téléphone": "03 88 10 81 23",
@@ -2533,7 +2618,7 @@
           "type": "Feature",
           "properties": {
             "name": "Bretz'Selle",
-            "Description": "Mise à disposition d'ateliers équipés. Promotion active du vélo basée sur l'apprentissage de la mécanique et l'animation. ",
+            "Description": "Mise à disposition d&rsquo;ateliers équipés. Promotion active du vélo basée sur l&rsquo;apprentissage de la mécanique et l&#39;animation. ",
             "Adresse": "10 rue des bouchers 67000 Strasbourg",
             "Email": "contact@bretzselle.org",
             "Téléphone": "09 51 29 87 59",
@@ -2826,7 +2911,7 @@
           "type": "Feature",
           "properties": {
             "name": "La ruche aux deux reines",
-            "Description": "Une cuisine contemporaine qui fera plaisir autant aux amoureux de la bonne viande qu'aux végétariens.",
+            "Description": "Une cuisine contemporaine qui fera plaisir autant aux amoureux de la bonne viande qu&#39;aux végétariens.",
             "Adresse": "34 rue de la course 67000 Strasbourg",
             "Téléphone": "03 88 24 07 36",
             "Site web": "http://www.larucheauxdeuxreines.fr",
@@ -2891,7 +2976,7 @@
           "type": "Feature",
           "properties": {
             "name": "Le Local",
-            "Description": "Un Bar-Concert  atypique qui favorise les circuits-courts. Concerts d'artistes régionaux et grand choix de bières locales et artisanales. ",
+            "Description": "Un Bar-Concert  atypique qui favorise les circuits-courts. Concerts d&#39;artistes régionaux et grand choix de bières locales et artisanales. ",
             "Adresse": "3 rue de l'Abreuvoir 67000 Strasbourg",
             "Email": "lelocalbar@gmail.com",
             "Téléphone": "09 86 06 03 98",
@@ -2935,7 +3020,7 @@
           "type": "Feature",
           "properties": {
             "name": "Le Troc'afé",
-            "Description": "Un bar alternatif au cadre chaleureux. Cela ressemble fortement à un vide-grenier où s'entassent les objets du quotidien.",
+            "Description": "Un bar alternatif au cadre chaleureux. Cela ressemble fortement à un vide-grenier où s&rsquo;entassent les objets du quotidien.",
             "Adresse": "8 rue du Faubourg de Saverne 67000 Strasbourg",
             "Téléphone": "03 88 23 23 29",
             "Page facebook": "https://www.facebook.com/letrocafe/info?tab=overview",
@@ -2979,7 +3064,7 @@
             "Description": "Restauration mobile locavore et en grande partie bio",
             "Adresse": "66 rue du Leyde 67130 WILDERSBACH",
             "Email": "contact@locadevore.com",
-            "Téléphone": "770379360",
+            "Téléphone": "0770379360",
             "Site web": "https://www.locadevore.com/",
             "Page facebook": "https://www.facebook.com/locadevore/?fref=ts",
             "Défi": "Présenter le stück au drive fermier de Schirmeck"
@@ -2989,6 +3074,28 @@
             "coordinates": [
               7.763875,
               48.577418
+	    ]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "My Sweet's",
+            "Description": "Pâtisserie & Traiteur sur commande, Cuisine à domicile Pour tout événement privé et professionnel Produits de saison, faits maison et essentiellement bio et locaux",
+            "Adresse": "8 rue de l'angle 67210 OBERNAI",
+            "Email": "contact@mysweets.fr",
+            "Téléphone": "+33(0)6 95 60 28 24",
+            "Site web": "http://mysweets.fr",
+            "Page facebook": "My Sweet?s traiteur",
+            "Défi": "objectif zéro déchets"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.476484,
+              48.463104
 	    ]
           }
         }
@@ -3019,7 +3126,7 @@
           "type": "Feature",
           "properties": {
             "name": "Pizzamap",
-            "Description": "Des pizzas surprenantes, croustillantes et savoureuses, mettant à l'honneur des agriculteurs et éleveurs locaux en bio",
+            "Description": "Des pizzas surprenantes, croustillantes et savoureuses, mettant à l&#39;honneur des agriculteurs et éleveurs locaux en bio",
             "Adresse": "19 route des Romains 67200 Strasbourg",
             "Email": "cookwitholivier@gmail.com",
             "Téléphone": "06 23 57 81 12",
@@ -3171,7 +3278,7 @@
           "type": "Feature",
           "properties": {
             "name": "Restaurant L'acoustic",
-            "Description": "Ce Resto Bio  vous accueille dans un charmant caveau voûté en briques rouges. Tous les ingrédients qui entrent dans la composition des plats pour les moins atypiques sont d'origine 100% biologique.",
+            "Description": "Ce Resto Bio  vous accueille dans un charmant caveau voûté en briques rouges. Tous les ingrédients qui entrent dans la composition des plats pour les moins atypiques sont d&#39;origine 100% biologique.",
             "Adresse": "5 place du marché vert 67600 Sélestat",
             "Email": "restobiolacoustic@gmail.com",
             "Téléphone": "03 88 92 29 40",
@@ -3235,7 +3342,7 @@
           "type": "Feature",
           "properties": {
             "name": "Velicious",
-            "Description": "L'alternative Végétale ! Salon de Café et Restaurant 100% végétal. Cuisine Végétalienne et Végétarienne.",
+            "Description": "L&#39;alternative Végétale ! Salon de Café et Restaurant 100% végétal. Cuisine Végétalienne et Végétarienne.",
             "Adresse": "43 rue Geiler 67000 Strasbourg",
             "Email": "contact@velicious.fr",
             "Téléphone": "09 72 53 07 35",
@@ -3293,7 +3400,7 @@
           "type": "Feature",
           "properties": {
             "name": "AtOmYoga",
-            "Description": "Harmonisation du corps et de l'esprit - Accompagnement global. Yoga, ayurveda, coaching intuitif, reiki, bébéd-parents.  ",
+            "Description": "Harmonisation du corps et de l&#39;esprit - Accompagnement global. Yoga, ayurveda, coaching intuitif, reiki, bébéd-parents.  ",
             "Adresse": "12 rue de Steinbourg 67200 Strasbourg",
             "Email": "admin@atomyoga.fr",
             "Téléphone": "06 85 84 47 45",
@@ -3335,7 +3442,7 @@
           "type": "Feature",
           "properties": {
             "name": "Claire Lauffenburger",
-            "Description": "Médecin, psychiatrie de l'enfant et de l'adolescent.",
+            "Description": "Médecin, psychiatrie de l&#39;enfant et de l&#39;adolescent.",
             "Adresse": "3, rue DORLAN 67600 Sélestat",
             "Téléphone": "03 88 82 87 00",
             "Défi": "Donner du temps pour gérer un conflit interne en cas de besion au sein du Stück"
@@ -3354,7 +3461,7 @@
           "type": "Feature",
           "properties": {
             "name": "Céline Campetto",
-            "Description": "Thérapeute corporelle depuis 20 ans, elle vous accueille et vous accompagne dans votre détente et l'harmonisation de vous-même. Massage de relaxation et travail psycho-corporel.  ",
+            "Description": "Thérapeute corporelle depuis 20 ans, elle vous accueille et vous accompagne dans votre détente et l&#39;harmonisation de vous-même. Massage de relaxation et travail psycho-corporel.  ",
             "Adresse": "23 rue du Faubourg de Pierre 67000 Strasbourg",
             "Email": "celine@amphora-artdevivre.fr",
             "Téléphone": "03 88 59 30 89",
@@ -3414,7 +3521,7 @@
           "type": "Feature",
           "properties": {
             "name": "Elisabeth Wolf - Kinésiologue",
-            "Description": "La kinésiologie est destinée à favoriser un état d'équilibre et de bien être physique, mental et social s'adressant à tout public: du nouveau né à l'adulte, l'écolier ou le sportif, la femme enceinte...",
+            "Description": "La kinésiologie est destinée à favoriser un état d&#39;équilibre et de bien être physique, mental et social s&#39;adressant à tout public: du nouveau né à l&#39;adulte, l&#39;écolier ou le sportif, la femme enceinte...",
             "Adresse": "25 boulevard du président Wilson 67000 Strasbourg",
             "Email": "kinesioperinatale@orange.fr",
             "Téléphone": "06 77 76 20 93",
@@ -3435,7 +3542,7 @@
           "type": "Feature",
           "properties": {
             "name": "Frey-Bastien Nancy Ortho-bionomy",
-            "Description": "Soins manuels doux (dont la source est l'ostéopathie) : aide pour libérer le corps de ses tensions physiques, émotionnelles et énergétiques.",
+            "Description": "Soins manuels doux (dont la source est l&#39;ostéopathie) : aide pour libérer le corps de ses tensions physiques, émotionnelles et énergétiques.",
             "Adresse": "15 rue des Vosges 67560 ROSHEIM",
             "Email": "info@nancyortho.fr",
             "Téléphone": "06 33 25 97 70",
@@ -3530,8 +3637,8 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              7.615176,
-              48.383446
+              7.614947,
+              48.383529
 	    ]
           }
         }
@@ -3541,7 +3648,7 @@
           "type": "Feature",
           "properties": {
             "name": "Marine Trevisan",
-            "Description": "Cabinet d'Energétique tradionnel chinoise, acupuncture, Tuina, ventouses, pharmacopée chinoise, réharmonisation énergétique",
+            "Description": "Cabinet d&#39;Energétique tradionnel chinoise, acupuncture, Tuina, ventouses, pharmacopée chinoise, réharmonisation énergétique",
             "Adresse": "6 Quai St-Jean 67000 Strasbourg",
             "Email": "marine.energetique@gmail.com",
             "Téléphone": "06 20 39 77 81",
@@ -3562,7 +3669,7 @@
           "type": "Feature",
           "properties": {
             "name": "N. Taiana, ostéopathe",
-            "Description": "L'ostéopathie peut soulager différentes douleurs et problèmes fonctionnels. Nicolas Taiana vous reçoit sur rendez-vous pour une séance d'ostéopathie  dans son cabinet ou à domicile.",
+            "Description": "L&#39;ostéopathie peut soulager différentes douleurs et problèmes fonctionnels. Nicolas Taiana vous reçoit sur rendez-vous pour une séance d&rsquo;ostéopathie  dans son cabinet ou à domicile.",
             "Adresse": "8 place de la gare 67000 Strasbourg",
             "Email": "contact@osteopathe-taiana.com",
             "Téléphone": "03 88 23 24 33",
@@ -3583,7 +3690,7 @@
           "type": "Feature",
           "properties": {
             "name": "Nature à coeur",
-            "Description": "Des articles originaux et différents dans leur utilisation, et leurs propriétés dont le point commun est d'aller dans le sens de la vie, de l'énergie et du bien-être, en respectant l'Homme et la planète.",
+            "Description": "Des articles originaux et différents dans leur utilisation, et leurs propriétés dont le point commun est d&rsquo;aller dans le sens de la vie, de l&rsquo;énergie et du bien-être, en respectant l&rsquo;Homme et la planète.",
             "Adresse": "14 rue de la batterie 67118 Geispolsheim",
             "Email": "dl@natureacoeur.fr",
             "Téléphone": "03 88 39 86 20",
@@ -3687,7 +3794,7 @@
           "type": "Feature",
           "properties": {
             "name": "Psychanalyste - Anne Herriot",
-            "Description": "Psychanalyse et activités d'orientation scolaire.",
+            "Description": "Psychanalyse et activités d&#39;orientation scolaire.",
             "Adresse": "1 a rue Laurent HEYD 67380 LINGOLSHEIM",
             "Téléphone": "03 88 12 50 57",
             "Défi": "Mobiliser 4 professionnels de santé et les inciter à rentrer dans le réseau"
@@ -3769,7 +3876,7 @@
           "type": "Feature",
           "properties": {
             "name": "Sophie Messer - Etiopathe",
-            "Description": "L'étiopathie est une thérapie manuelle qui s'attache à rechercher l'origine de la pathologie afin de pouvoir traiter les causes et non les symptômes. ",
+            "Description": "L&#39;étiopathie est une thérapie manuelle qui s&#39;attache à rechercher l&#39;origine de la pathologie afin de pouvoir traiter les causes et non les symptômes. ",
             "Adresse": "10 Rue des Hallebardes 67000 Strasbourg",
             "Email": "sophiemesser88@gmail.com",
             "Téléphone": "06 31 82 10 53",
@@ -3781,6 +3888,25 @@
             "coordinates": [
               7.749155,
               48.581907
+	    ]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "kiné Laurence MISSLIN",
+            "Description": "Masseur - kinésithérapeute et thérapie manuelle chinoise.",
+            "Adresse": "3 rue Saint Aloïse 67100 STRASBOURG",
+            "Téléphone": "0981910517",
+            "Défi": "Remplacer l'usage de papier jetable (table de massage) en proposant aux patients d'apporter leur propre serviette lavable."
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.760901,
+              48.564998
 	    ]
           }
         }
@@ -3846,6 +3972,26 @@
         {
           "type": "Feature",
           "properties": {
+            "name": "Caico studio graphique",
+            "Description": "Création de vos supports de communication",
+            "Adresse": "17 rue du général de Gaulle 67203 OBERSCHAEFFOLSHEIM",
+            "Email": "contact@caico.fr",
+            "Site web": "http://www.caico.fr/",
+            "Défi": "Proposer ses compétences en graphisme pour le Stück : une affiche à accrocher dans les commerces du réseau Stück"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.6537600999999995,
+              48.58667339999999
+	    ]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
             "name": "Cinq Plus Steeve Ambiehl",
             "Description": "Expert comptable",
             "Adresse": "2 rue Thomas Edison 67450 Mundolsheim",
@@ -3871,7 +4017,7 @@
             "Description": "Réalisation de diagnostics énergétiques.",
             "Adresse": "75 grand rue 67000 STRASBOURG",
             "Email": "vkrauth@gmail.com",
-            "Téléphone": "607100987",
+            "Téléphone": "0607100987",
             "Défi": "Essayer de convaincre d?autre diagnostiqueurs de rentrer dans le réseau du stück"
           },
           "geometry": {
@@ -3888,7 +4034,7 @@
           "type": "Feature",
           "properties": {
             "name": "Crédit Municipal de Strasbourg",
-            "Description": "Avec le prêt sur gage, le conseil et l'orientation vers les formules de microcrédit, ou le soutien à l'épargne solidaire, le Crédit Municipal de Strasbourg assure une mission de service public, avec une vocation de banque sociale, qui oeuvre dans la lutte contre l'exclusion bancaire.",
+            "Description": "Avec le prêt sur gage, le conseil et l&rsquo;orientation vers les formules de microcrédit, ou le soutien à l&rsquo;épargne solidaire, le Crédit Municipal de Strasbourg assure une mission de service public, avec une vocation de banque sociale, qui &oelig;uvre dans la lutte contre l&rsquo;exclusion bancaire.",
             "Adresse": "6 Rue d'Ingwiller 67000 STRASBOURG",
             "Email": "info@credit-municipal-strasbourg.fr",
             "Téléphone": "03 88 32 04 21",
@@ -3909,7 +4055,7 @@
           "type": "Feature",
           "properties": {
             "name": "Cécile Favé",
-            "Description": "Conseil et accompagnement en gestion de projet dans l'Economie Sociale et Solidaire (ESS).",
+            "Description": "Conseil et accompagnement en gestion de projet dans l&#39;Economie Sociale et Solidaire (ESS).",
             "Adresse": "13 quai Kléber 67000 Strasbourg",
             "Email": "ae.cecilefave@gmail.com",
             "Téléphone": "06 30 46 34 11",
@@ -3929,7 +4075,7 @@
           "type": "Feature",
           "properties": {
             "name": "Défi Ecologique",
-            "Description": "Aménagements « biodiversité » (conseil et intervention), diagnostics, signalétique pédagogique, BioContrôle (lutte inondative et/ou intégrée) ou encore études d'impacts pour institutionnels, particuliers et professionnels.",
+            "Description": "Aménagements « biodiversité » (conseil et intervention), diagnostics, signalétique pédagogique, BioContrôle (lutte inondative et/ou intégrée) ou encore études d&rsquo;impacts pour institutionnels, particuliers et professionnels.",
             "Adresse": "16 rue de Verdun 67600 Sélestat",
             "Email": "julien@defi-ecologique.com",
             "Téléphone": "06 71 10 97 33",
@@ -4014,7 +4160,7 @@
           "type": "Feature",
           "properties": {
             "name": "Magellan Communication",
-            "Description": "Réalisation de films, vidéos et photographies pour le monde de l'entreprise, les associations, les collectivités etc ...",
+            "Description": "Réalisation de films, vidéos et photographies pour le monde de l&#39;entreprise, les associations, les collectivités etc ...",
             "Adresse": "20 boulevard du Président Poincaré 67200 Strasbourg",
             "Email": "sbrillais@magellan-communication.fr",
             "Téléphone": "06 83 34 53 12",
@@ -4057,7 +4203,7 @@
           "type": "Feature",
           "properties": {
             "name": "NJ Near",
-            "Description": "Développement d'outils de gestion personnalisée pour les entreprises.",
+            "Description": "Développement d&#39;outils de gestion personnalisée pour les entreprises.",
             "Adresse": "4 rue du Château 67310 Scharrachbergheim",
             "Email": "njnear36@gmail.com",
             "Téléphone": "06 99 35 98 91",
@@ -4099,7 +4245,7 @@
           "type": "Feature",
           "properties": {
             "name": "RD Conseils",
-            "Description": "Expertise en création et reprise d'entreprise. Spécialiste des entreprises coopératives.  ",
+            "Description": "Expertise en création et reprise d&#39;entreprise. Spécialiste des entreprises coopératives.  ",
             "Adresse": "2 rue de Besançon 67100 Strasbourg",
             "Email": "rdaviau@free.fr",
             "Téléphone": "06 99 52 17 09",
@@ -4197,7 +4343,7 @@
           "type": "Feature",
           "properties": {
             "name": "Freshmile",
-            "Description": "Freshmile est un opérateur de charge pour véhicules électriques. Sa vocation est de simplifier la charge pour l'utilisateur final, la gestion d'un réseau de borne pour le propriétaire et la maintenance pour le réparateur.",
+            "Description": "Freshmile est un opérateur de charge pour véhicules électriques. Sa vocation est de simplifier la charge pour l&#39;utilisateur final, la gestion d&#39;un réseau de borne pour le propriétaire et la maintenance pour le réparateur.",
             "Adresse": "Aéroport Strasbourg, Bâtiment Blériot 67960 Entzheim",
             "Email": "web@freshmile.com",
             "Téléphone": "03 88 25 70 58",
@@ -4255,7 +4401,7 @@
           "type": "Feature",
           "properties": {
             "name": "Amarantho",
-            "Description": "Agence de communication collaborative, durable et solidaire L'agence qui crée des liens.",
+            "Description": "Agence de communication collaborative, durable et solidaire L&#39;agence qui crée des liens.",
             "Adresse": "1 place de la porte blanche 67000 Strasbourg",
             "Email": "hello@amarantho.fr",
             "Téléphone": "07 83 22 15 87",
@@ -4268,6 +4414,27 @@
             "coordinates": [
               7.731705,
               48.58009
+	    ]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Edite Fernandes Illustration - Graphisme",
+            "Description": "Illustration et graphisme",
+            "Adresse": "25 rue du Vieux marché aux vins 67000 STRASBOURG",
+            "Email": "edite.fernandes@wanadoo.fr",
+            "Téléphone": "+33(0)6 25 55 85 86",
+            "Site web": "http://editefernandes.ultra-book.com",
+            "Défi": "réduction consommation d?énergie lié au numérique"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.741852,
+              48.584037
 	    ]
           }
         }
@@ -4334,7 +4501,7 @@
           "type": "Feature",
           "properties": {
             "name": "La Java de Lili",
-            "Description": "Boutique qui vous propose des bijoux et accessoires de créateurs, une sélection de vêtements ainsi que des meubles d'appoints. La poésie s'invite dans votre quotidien avec des collections choisies au \"coup de coeur\" .",
+            "Description": "Boutique qui vous propose des bijoux et accessoires de créateurs, une sélection de vêtements ainsi que des meubles d&#39;appoints. La poésie s&rsquo;invite dans votre quotidien avec des collections choisies au \"coup de coeur\" .",
             "Adresse": "6 rue du Marteau 67600 Sélestat",
             "Email": "lajavadelili@gmail.com",
             "Téléphone": "03 88 74 45 03",
@@ -4355,7 +4522,7 @@
           "type": "Feature",
           "properties": {
             "name": "Oenosphère Caviste",
-            "Description": "Caviste / Bar à Vin / Cours d'Oenologie à Strasbourg  ",
+            "Description": "Caviste / Bar à Vin / Cours d&#39;Oenologie à Strasbourg  ",
             "Adresse": "33 rue de Zurich 67000 Strasbourg",
             "Email": "info@oenosphere.com",
             "Téléphone": "03 88 36 10 87",
@@ -4412,6 +4579,27 @@
         {
           "type": "Feature",
           "properties": {
+            "name": "Association Le Stück",
+            "Description": "L&#39;association Le Stück a pour objet gère la monnaie locale du même nom. Pas une hésitation : rejoignez-nous !",
+            "Adresse": "78 route du Polygone 67100 STRASBOURG",
+            "Email": "contact@lestuck.eu",
+            "Téléphone": "0983569588",
+            "Site web": "http://www.lestuck.eu",
+            "Page facebook": "https://www.facebook.com/lestuckstrasbourg"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.758112399999959,
+              48.56697369999999
+	    ]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
             "name": "BIOGourmands",
             "Description": "Restaurant, traiteur et salon de thé 100% bio à Obernai. Dégustation sur place et commande de plats à emporter (déjeuner et dîner). Pains et viennoiseries bio.",
             "Adresse": "100 rue du Général Gouraud 67210 OBERNAI",
@@ -4435,7 +4623,7 @@
           "type": "Feature",
           "properties": {
             "name": "Biocoop - Le Quai des Halles",
-            "Description": "Magasin de produits issus de l'agriculture biologique",
+            "Description": "Magasin de produits issus de l&#39;agriculture biologique",
             "Adresse": "6 rue de Sébastopol 67000 Strasbourg",
             "Email": "lequaideshalles@orange.fr",
             "Téléphone": "03 88 36 52 68",
@@ -4479,7 +4667,7 @@
           "type": "Feature",
           "properties": {
             "name": "Crédit Municipal de Strasbourg",
-            "Description": "Avec le prêt sur gage, le conseil et l'orientation vers les formules de microcrédit, ou le soutien à l'épargne solidaire, le Crédit Municipal de Strasbourg assure une mission de service public, avec une vocation de banque sociale, qui oeuvre dans la lutte contre l'exclusion bancaire.",
+            "Description": "Avec le prêt sur gage, le conseil et l&rsquo;orientation vers les formules de microcrédit, ou le soutien à l&rsquo;épargne solidaire, le Crédit Municipal de Strasbourg assure une mission de service public, avec une vocation de banque sociale, qui &oelig;uvre dans la lutte contre l&rsquo;exclusion bancaire.",
             "Adresse": "6 Rue d'Ingwiller 67000 STRASBOURG",
             "Email": "info@credit-municipal-strasbourg.fr",
             "Téléphone": "03 88 32 04 21",
@@ -4491,6 +4679,27 @@
             "coordinates": [
               7.742643300000054,
               48.5881018
+	    ]
+          }
+        }
+        ,
+
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Day by Day",
+            "Description": "Epicerie vendant des produits alimentaires, d&#39;hygiène et d&#39;entretien en vrac.  ",
+            "Adresse": "90 route du Polygone 67100 Strasbourg",
+            "Téléphone": "03 88 41 63 35",
+            "Site web": "http://daybyday-shop.com/vrac",
+            "Page facebook": "https://www.facebook.com/pages/Day-By-Day/493700694148787?fref=ts",
+            "Défi": "Chercher des débouchés et les mettre en pratique pour les seaux et bidons vides"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.759039,
+              48.565826
 	    ]
           }
         }
@@ -4604,7 +4813,7 @@
           "type": "Feature",
           "properties": {
             "name": "Restaurant L'acoustic",
-            "Description": "Ce Resto Bio  vous accueille dans un charmant caveau voûté en briques rouges. Tous les ingrédients qui entrent dans la composition des plats pour les moins atypiques sont d'origine 100% biologique.",
+            "Description": "Ce Resto Bio  vous accueille dans un charmant caveau voûté en briques rouges. Tous les ingrédients qui entrent dans la composition des plats pour les moins atypiques sont d&#39;origine 100% biologique.",
             "Adresse": "5 place du marché vert 67600 Sélestat",
             "Email": "restobiolacoustic@gmail.com",
             "Téléphone": "03 88 92 29 40",
@@ -4648,7 +4857,7 @@
           "type": "Feature",
           "properties": {
             "name": "SPACS",
-            "Description": "Service pour la Promotion de l'ACtion Sociale (SPACS) de l'Université de Strasbourg",
+            "Description": "Service pour la Promotion de l&#39;ACtion Sociale (SPACS) de l&#39;Université de Strasbourg",
             "Adresse": "Université de Strasbourg Service pour la Promotion de l'ACtion Sociale 43 rue Goethe 67000 STRASBOURG",
             "Email": "spacs@unistra.fr",
             "Téléphone": "03 68 85 20 00",
@@ -4667,4 +4876,3 @@
    }
   ]
 }
-
