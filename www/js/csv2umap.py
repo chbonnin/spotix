@@ -8,7 +8,7 @@ import datetime
 import codecs
 
 def toUnicode(str):
-	return unicode(str.replace('"','\\"'), options.encoding)
+	return unicode(str.replace('"','\\"').replace("\t",""), options.encoding)
 
 parser = optparse.OptionParser(usage = "%prog [options] <csv file> <umap file>\n\n"
    "Conversion d'une exportation Dolibarr au format CSV des professionnels vers un fichier umap pour OpenStreetMap\n"

@@ -1,4 +1,4 @@
-function Spot(num, name, desc, adr, mail, tel, web, fbook, obs, longi, lati, hours, cat){
+ function Spot(num, name, desc, adr, mail, tel, web, fbook, obs, longi, lati, hours, cat){
     this.numero=num;
 	this.nom=name;
     this.description=desc ? desc : "-";
@@ -16,9 +16,10 @@ function Spot(num, name, desc, adr, mail, tel, web, fbook, obs, longi, lati, hou
     this.htmlDesc=function(){
         var strRet= "<b><u>"+this.nom+"</u></b><table><tr><th>"+tradDescription+"</th><td colspan='2'>";
         strRet+=this.description+"</td></tr><tr><th>"+tradAdresse+"</th><td colspan='2'>"
-        strRet+=this.adresse+"<br> <a href='#' onclick='copyAddress("+this.numero+")'>"+tradCopierladresse+"</a></td></tr>";
+        strRet+=this.adresse+"<br> <a href='geo:"+this.latitude+","+this.longitude+"'>"+tradCopierladresse+"</a></td></tr>";
+ //       strRet+=this.adresse+"<br> <a href='#' onclick='copyAddress("+this.numero+")'>"+tradCopierladresse+"</a></td></tr>";
         if (this.email)      strRet+="<tr><th>"+tradEmail+"</th><td colspan='2' class='break'>"+this.email+"</td></tr>";
-        if (this.telephone)  strRet+="<tr><th>"+tradTelephone+"</th><td colspan='2'>"+this.telephone+"</td></tr>";
+        if (this.telephone)  strRet+="<tr><th>"+tradTelephone+"</th><td colspan='2'><a href='tel:"+this.telephone+"'>"+this.telephone+"</a></td></tr>";
         if (this.site)       strRet+="<tr><th>"+tradSite+"</th><td colspan='2'><a class='break' onclick='window.open(\""+this.site+"\",\"_system\")'>"+this.site+"</a></td></tr>";
         if (this.facebook)   strRet+="<tr><th>"+tradFacebook+"</th><td colspan='2'><a class='break' onclick='window.open(\""+this.facebook+"\",\"_system\")'>"+this.facebook+"</a></td></tr>";
         if (this.horaire)    strRet+="<tr><th>"+tradHoraire+"</th><td colspan='2'>"+this.horaire.replace(/,/g,"<br>");
@@ -234,7 +235,7 @@ function appSettings(){
     strRet += "<option value='fr' "+(language.slice(0,2)=='fr'?"selected":"")+">Français</option>";
     strRet += "</select><br/>";
 //    strRet += tradTailleIcones+"<span id='sliderValue'> "+coefSize+"</span><div id='idSliderSize'></div>";
-    strRet += "<label for='idSliderSize'>"+tradTailleIcones+"<span id='sliderValue'> "+coefSize+"</span></label>";
+    strRet += "<label for='idSliderSize'>"+tradTailleIcones+"<span id='sliderValue'> "+Math.floor(coefSize*10)+"</span></label>";
     strRet += "<input type='range' name='idSliderSize' id='idSliderSize' value='"+coefSize+"' min='0.1' max='1.5' step='0.1' onchange='sliderChangeIconSize(this.value)'/>";
 
     try{
@@ -247,7 +248,7 @@ function appSettings(){
 }
 //Evénement de déplacement du curseur pour la taille des marqueurs sur la cartes
 function sliderChangeIconSize(value){
-	  $("#sliderValue").text(value);
+	  $("#sliderValue").text(Math.floor(value*10));
 	  localStorage.coefSize=value;
 	  initList(false); 
 }
