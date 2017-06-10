@@ -16,7 +16,7 @@
     this.htmlDesc=function(){
         var strRet= "<b><u>"+this.nom+"</u></b><table><tr><th>"+tradDescription+"</th><td colspan='2'>";
         strRet+=this.description+"</td></tr><tr><th>"+tradAdresse+"</th><td colspan='2'>"
-        strRet+=this.adresse+"<br> <a href='geo:"+this.latitude+","+this.longitude+"'>"+tradCopierladresse+"</a></td></tr>";
+        strRet+=this.adresse+"<br> <a data-rel='external' href='"+strGeoUrl+this.latitude+","+this.longitude+"'>"+tradCopierladresse+"</a></td></tr>";
  //       strRet+=this.adresse+"<br> <a href='#' onclick='copyAddress("+this.numero+")'>"+tradCopierladresse+"</a></td></tr>";
         if (this.email)      strRet+="<tr><th>"+tradEmail+"</th><td colspan='2' class='break'>"+this.email+"</td></tr>";
         if (this.telephone)  strRet+="<tr><th>"+tradTelephone+"</th><td colspan='2'><a href='tel:"+this.telephone+"'>"+this.telephone+"</a></td></tr>";
@@ -241,6 +241,9 @@ function appSettings(){
     try{
         var center=map.getCenter();
         strRet += "Latitude: "+center.lat.toFixed(6)+", Longitude: "+center.lng.toFixed(6)+"<br>";
+    } catch (err){}
+    try{
+        strRet += "<br>"+tradSysteme+device.manufacturer+" "+device.model+", "+device.platform+" "+device.version   ;
     } catch (err){}
     strRet += "<br><a onclick='$(\"#idList\").load(\""+tradCreditFile+"\")'>"+tradCredit+"</a><br>";
     strRet +="</div>";

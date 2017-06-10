@@ -161,8 +161,12 @@
 
     $(function(){
       document.addEventListener("deviceready", gpsLocateNow, false);
-      })
-    //gpsLocateNow();
+      document.addEventListener("deviceready", function(){
+                            try{
+                                if (device.platform=='iOS')
+                                    strGeoUrl="maps://?daddr=";
+                            } catch (err){}}, false);
+      });
 	</script>
     </body>
 </html>
