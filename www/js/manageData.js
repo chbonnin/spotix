@@ -21,22 +21,18 @@ function initData(){
     if (!localStorage.lastUrl)
         localStorage.lastUrl="http://lestuck.eu/professionnels_du_stuck";//premier lancement
     
-    if (!localStorage.storedLstSpot){//premier lancement ou après une réinitialisation
+//    if (!localStorage.storedLstSpot){//premier lancement ou après une réinitialisation
         lstSpot=[];
-        $.getJSON("stuck.umap", function(json){//données umap
+        $.getJSON("stuck", function(json){//données umap
                   lstSpot=parseJson(json);
 		  lstSpot.sort(compareSpot);
 		  localStoreSettings(json);
                   initMarkers();
               });
-//        if (lstSpot.length==0){//données texte
-//            lstSpot=parseData(stuckData);
-//            localStorage.storedLstSpot=stuckData;
-//        }
-    } else {//données stockées
-        lstSpot=parseData(localStorage.storedLstSpot);
-        initMarkers();
-    }
+//    } else {//données stockées
+//        lstSpot=parseData(localStorage.storedLstSpot);
+//        initMarkers();
+//    }
     if (localStorage.datLastUpdate){
         var datLast=new Date(localStorage.datLastUpdate.replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$3-$2-$1'));
         if ((new Date().getTime() - datLast.getTime())/86400000 > 90){

@@ -49,7 +49,7 @@
                 <li><a href="#" data-icon="location" id="idShowMap" class="ui-btn-active"></a></li>
                 <li><a href="#" data-icon="bullets" id="idShowList"></a></li>
                 <li><a href="#" data-icon="custom" id="idFiltre" class="Filtre"></a></li>
-                <li><a href="#" data-icon="gear" id="idSettings" ></a></li>
+                <!--li><a href="#" data-icon="gear" id="idSettings" ></a></li-->
             </ul>
             </div>
         </div>
@@ -159,13 +159,9 @@
 
     map.addControl(new GpsLocate());
 
-    $(function(){
-      document.addEventListener("deviceready", gpsLocateNow, false);
-      document.addEventListener("deviceready", function(){
-                            try{
-                                if (device.platform=='iOS')
-                                    strGeoUrl="maps://?daddr=";
-                            } catch (err){}}, false);
+    $(document).ready(function(){
+                      gpsLocateNow();
+                      strGeoUrl="maps://?daddr=";
       });
 	</script>
     </body>
