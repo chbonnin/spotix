@@ -240,11 +240,16 @@ function appSettings(){
 
     try{
         var center=map.getCenter();
-        strRet += "Latitude: "+center.lat.toFixed(6)+", Longitude: "+center.lng.toFixed(6)+"<br>";
+        strRet += "Latitude: "+center.lat.toFixed(6)+", Longitude: "+center.lng.toFixed(6);//+", Zoom:"+map.getZoom()
+        strRet += "<br>";
     } catch (err){}
     try{
         strRet += "<br>"+tradSysteme+device.manufacturer+" "+device.model+", "+device.platform+" "+device.version   ;
     } catch (err){}
+    strRet += "<br><input type='text' id='idMoveMarker' value='";
+    if (localStorage.fMoveMarker) strRet+= localStorage.fMoveMarker;
+    strRet += "' title='Distance maximale entre 2 icônes pour éviter la superposition (valeur par défaut : 4)'><a href='#' class='ui-btn' onclick='moveMarkers($(\"#idMoveMarker\").val())'>Déplacer icônes</a>" ;
+
     strRet += "<br><a onclick='$(\"#idList\").load(\""+tradCreditFile+"\")'>"+tradCredit+"</a><br>";
     strRet +="</div>";
     return strRet;
@@ -538,4 +543,49 @@ function updateFromUrl(strUrl, bForce){
         alert(err);
     }
 }
+const MARKER_SIZE=0.6;
+const COEF_DIST_METER=1e6;
+const COEF_LAT=3;
+const COEF_LONG=4;
+//Déplacement des marqueurs pour éviter la superposition
+function moveMarkers(val){
+    if (val) localStorage.fMoveMarker=val;
+    var fDistMax=parseFloat(localStorage.fMoveMarker)*coefSize/MARKER_SIZE/Math.pow(2,map.getZoom());
+    //initList(false);
+    for (iSpot=0;iSpot<lstSpot.length; iSpot++){
+        var spot=lstSpot[iSpot];
+        var iCat=mapCat[spot.categorie];
+        if (iCat>=0 && !lstCat[iCat].exclu){
+                var posCenter=new L.LatLng(spot.latitude, spot.longitude), posNext=posCenter;
+                var iCirc=0, iAng=0;
+                var isOccupied=true;
+                while (isOccupied){//disposition des marqueurs en cercle concentriques (6 * numCercle par cercles)
+                        if (occupiedLocation(posNext, fDistMax*COEF_DIST_METER, iSpot)){
+                                if (iAng>=iCirc*6){
+                                        iCirc+=1;
+                                        iAng=0;
+                                } else 
+                                        iAng++;
 
+                                var ang=Math.PI/3*(1/(iCirc+1) + iAng/iCirc);
+                                posNext=new L.LatLng(posCenter.lat+iCirc*fDistMax*COEF_LAT*Math.sin(ang), posCenter.lng+iCirc*fDistMax*COEF_LONG*Math.cos(ang));
+                        } else 
+                                isOccupied=false;
+                }
+                if (iCirc>0 || iAng>0){
+                    lstSpot[iSpot].marker.setLatLng(posNext);
+                    groupMap.addLayer(new L.Polyline([[posCenter.lat, posCenter.lng],[posNext.lat, posNext.lng]], {weight:2,color: lstCat[iCat].color}));
+                }
+        }
+    }
+    showMap(0,0);
+}
+//Cet emplacement est-il occupé par un autre marqueur affiché (non exclu)
+function occupiedLocation(pos, distMax, first/*numéro de marqueur déplacé*/){ 
+        for (jSpot=0;jSpot<lstSpot.length; jSpot++){
+            var jCat=mapCat[lstSpot[jSpot].categorie];
+            if (jSpot!=first && jCat>=0 && !lstCat[jCat].exclu && lstSpot[jSpot].marker.getLatLng().distanceTo(pos)<distMax)
+                return true;
+        }
+        return false;
+}
