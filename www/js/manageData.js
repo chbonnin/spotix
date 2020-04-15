@@ -83,7 +83,9 @@ function initList(bAsk){
 //Copie la liste des spots au format texte dans le presse-papier
 function copyList(){
     try{
-        if ($("#idImport").html().indexOf("<pre>")===0)
+        if ($('#idMoveMarker').val()==="poly"){
+            $('#idImport').html("<pre>"+coordNewSpot()+"</pre>");
+        }else if ($("#idImport").html().indexOf("<pre>")===0)
             $("#idImport").html("<pre>"+csvLstSpot()+"</pre>");
         else{
             cordova.plugins.clipboard.copy(stringLstSpot());
@@ -259,6 +261,17 @@ function csvLstSpot(){
         strRet+= champCsv(spot.description)+",";        
         strRet+=champCsv(spot.observation)+",";
         strRet+=champCsv(spot.horaire)+"\n";
+    }
+    return strRet;
+}
+// Liste des coordonnées de la catégorie Nouveau
+function coordNewSpot(){
+    var strRet='';
+    for (iSpot=0;iSpot<lstSpot.length; iSpot++)    {
+        const spot=lstSpot[iSpot];
+        if (   mapCat[lstSpot[iSpot].categorie]===0){
+            strRet+=spot.latitude+","+spot.longitude+",";
+        }
     }
     return strRet;
 }
